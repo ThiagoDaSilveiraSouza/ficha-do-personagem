@@ -2,6 +2,7 @@ export type SpellType = {
   id: string
   name: string
   school: string
+  nivel: string,
   castTime: string,
   range: string,
   components: string,

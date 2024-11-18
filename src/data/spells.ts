@@ -1,10 +1,8 @@
-import { SpellType } from "../interfaces";
-
-export const spells: SpellType[] = [
+export const spells = [
   {
     id: "1",
     name: "Acalmar Emoções",
-    school: "encantamento 2",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -21,12 +19,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "2",
     name: "Adivinhação",
-    school: "adivinhação 4",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -39,12 +38,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "3",
     name: "Ajuda",
-    school: "abjuração 2",
+    school: "abjuração",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -61,12 +61,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "4",
     name: "Alarme",
-    school: "abjuração 1",
+    school: "abjuração",
     castTime: "1 minuto",
     range: "9 metros",
     components: "V, S, M",
@@ -83,12 +84,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "5",
     name: "Aliado Planar",
-    school: "conjuração 6",
+    school: "conjuração",
     castTime: "10 minutos",
     range: "18 metros",
     components: "V, S",
@@ -101,12 +103,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "6",
     name: "Aljava Veloz",
-    school: "transmutação 5",
+    school: "transmutação",
     castTime: "1 ação bônus",
     range: "toque",
     components: "V, S, M",
@@ -119,12 +122,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "7",
     name: "Alterar Forma",
-    school: "transmutação 9",
+    school: "transmutação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -141,12 +145,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "8",
     name: "Alterar-se",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -163,12 +168,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "9",
     name: "Amizade",
-    school: "encantamento 0",
+    school: "encantamento",
     castTime: "1 ação",
     range: "pessoal",
     components: "S, M",
@@ -193,12 +199,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "10",
     name: "Amizade Animal",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -219,12 +226,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "11",
     name: "Ampliar Plantas",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação ou 8 horas",
     range: "45 metros",
     components: "V, S",
@@ -245,12 +253,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "12",
     name: "Âncora Planar",
-    school: "abjuração 5",
+    school: "abjuração",
     castTime: "1 hora",
     range: "18 metros",
     components: "V, S, M",
@@ -275,12 +284,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "13",
     name: "Andar Na Água",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -305,12 +315,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "14",
     name: "Animar Mortos",
-    school: "necromancia 3",
+    school: "necromancia",
     castTime: "1 minuto",
     range: "3 metros",
     components: "V, S, M",
@@ -327,12 +338,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "15",
     name: "Animar Objetos",
-    school: "transmutação 5",
+    school: "transmutação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -353,12 +365,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "16",
     name: "Antipatia/Simpatia",
-    school: "encantamento 8",
+    school: "encantamento",
     castTime: "1 hora",
     range: "18 metros",
     components: "V, S, M",
@@ -375,12 +388,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "17",
     name: "Aprimorar Habilidade",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -405,12 +419,13 @@ export const spells: SpellType[] = [
         id: "5",
         name: "feiticeiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "18",
     name: "Aprisionamento",
-    school: "abjuração 9",
+    school: "abjuração",
     castTime: "1 minuto",
     range: "9 metros",
     components: "V, S, M",
@@ -427,12 +442,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "19",
     name: "Arca Secreta de Leomund",
-    school: "conjuração 4",
+    school: "conjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -445,12 +461,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "20",
     name: "Área Escorregadia",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -463,12 +480,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "21",
     name: "Arma Elemental",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -481,12 +499,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "22",
     name: "Arma Espiritual",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "18 metros",
     components: "V, S",
@@ -499,12 +518,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "23",
     name: "Arma Mágica",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação bônus",
     range: "toque",
     components: "V, S",
@@ -521,12 +541,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "24",
     name: "Armadura Arcana",
-    school: "abjuração 1",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -543,12 +564,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "25",
     name: "Armadura de Agathys",
-    school: "abjuração 1",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -561,12 +583,13 @@ export const spells: SpellType[] = [
         id: "2",
         name: "bruxo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "26",
     name: "Arrombar",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V",
@@ -587,12 +610,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "27",
     name: "Assassino Fantasmagórico",
-    school: "ilusão 4",
+    school: "ilusão",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -605,12 +629,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "28",
     name: "Ataque Certeiro",
-    school: "adivinhação 0",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "9 metros",
     components: "S",
@@ -635,12 +660,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "29",
     name: "Ataque Visual",
-    school: "necromancia 6",
+    school: "necromancia",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -665,12 +691,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "30",
     name: "Augúrio",
-    school: "adivinhação 2",
+    school: "adivinhação",
     castTime: "1 minuto",
     range: "pessoal",
     components: "V, S, M",
@@ -678,12 +705,13 @@ export const spells: SpellType[] = [
     concentration: false,
     material: "Material: varetas, ossos ou objetos similarmente marcados valendo, no mínimo, 25 po.",
     description: "Se você conjurar a magia duas ou mais vezes antes de completar seu próximo descanso longo, existe uma chance cumulativa de 25 por cento de cada conjuração, depois da primeira que você fez, ter um resultado aleatório. O Mestre faz essa jogada secretamente.",
-    classesList: []
+    classesList: [],
+    "nivel": "2"
   },
   {
     id: "31",
     name: "Aumentar/Reduzir",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -700,12 +728,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "32",
     name: "Aura de Pureza",
-    school: "abjuração 4",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -718,12 +747,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "33",
     name: "Aura de Vida",
-    school: "abjuração 4",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -736,12 +766,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "34",
     name: "Aura de Vitalidade",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -754,12 +785,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "35",
     name: "Aura Mágica de Nystul",
-    school: "ilusão 2",
+    school: "ilusão",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -772,12 +804,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "36",
     name: "Aura Sagrada",
-    school: "abjuração 8",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -790,12 +823,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "37",
     name: "Auxílio Divino",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V, S",
@@ -808,12 +842,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "38",
     name: "Banimento",
-    school: "abjuração 4",
+    school: "abjuração",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -842,12 +877,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "39",
     name: "Banquete dos Heróis",
-    school: "conjuração 6",
+    school: "conjuração",
     castTime: "10 minutos",
     range: "9 metros",
     components: "V, S, M",
@@ -864,12 +900,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "40",
     name: "Barreira de Lâminas",
-    school: "evocação 6",
+    school: "evocação",
     castTime: "1 ação",
     range: "24 metros",
     components: "V, S",
@@ -882,12 +919,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "41",
     name: "Bênção",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -904,12 +942,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "42",
     name: "Boca Encantada",
-    school: "ilusão 2",
+    school: "ilusão",
     castTime: "1 minuto",
     range: "9 metros",
     components: "V, S, M",
@@ -926,12 +965,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "43",
     name: "Bola de Fogo",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -948,12 +988,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "44",
     name: "Bola de Fogo Controlável",
-    school: "evocação 7",
+    school: "evocação",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -970,12 +1011,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "45",
     name: "Bom Fruto",
-    school: "transmutação 1",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -992,12 +1034,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "46",
     name: "Bordão Místico",
-    school: "transmutação 0",
+    school: "transmutação",
     castTime: "1 ação bônus",
     range: "toque",
     components: "V, S, M",
@@ -1010,12 +1053,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "47",
     name: "Braços de Hadar",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -1028,12 +1072,13 @@ export const spells: SpellType[] = [
         id: "2",
         name: "bruxo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "48",
     name: "Bruxaria",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação bônus",
     range: "18 metros",
     components: "V, S, M",
@@ -1046,12 +1091,13 @@ export const spells: SpellType[] = [
         id: "2",
         name: "bruxo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "49",
     name: "Caminhar Em Árvores",
-    school: "conjuração 5",
+    school: "conjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -1068,12 +1114,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "50",
     name: "Caminhar No Vento",
-    school: "transmutação 6",
+    school: "transmutação",
     castTime: "1 minuto",
     range: "9 metros",
     components: "V, S, M",
@@ -1086,12 +1133,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "51",
     name: "Campo Antimagia",
-    school: "abjuração 8",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -1108,12 +1156,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "52",
     name: "Cão Fiel de Mordenkainen",
-    school: "conjuração 4",
+    school: "conjuração",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -1126,12 +1175,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "53",
     name: "Carne Para Pedra",
-    school: "transmutação 6",
+    school: "transmutação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -1148,12 +1198,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "54",
     name: "Cativar",
-    school: "encantamento 2",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -1170,12 +1221,13 @@ export const spells: SpellType[] = [
         id: "2",
         name: "bruxo"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "55",
     name: "Cegueira/Surdez",
-    school: "necromancia 2",
+    school: "necromancia",
     castTime: "1 ação",
     range: "9 metros",
     components: "V",
@@ -1200,12 +1252,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "56",
     name: "Chama Contínua",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -1222,12 +1275,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "57",
     name: "Chama Sagrada",
-    school: "evocação 0",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -1240,12 +1294,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "58",
     name: "Chicote de Espinhos",
-    school: "transmutação 0",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -1258,12 +1313,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "59",
     name: "Chuva de Meteoros",
-    school: "evocação 9",
+    school: "evocação",
     castTime: "1 ação",
     range: "1,5 quilômetro",
     components: "V, S",
@@ -1280,12 +1336,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "60",
     name: "Círculo da Morte",
-    school: "necromancia 6",
+    school: "necromancia",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -1306,12 +1363,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "61",
     name: "Círculo de Poder",
-    school: "abjuração 5",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -1324,12 +1382,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "62",
     name: "Círculo de Teletransporte",
-    school: "conjuração 5",
+    school: "conjuração",
     castTime: "1 minuto",
     range: "3 metros",
     components: "V, M",
@@ -1350,12 +1409,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "63",
     name: "Círculo Mágico",
-    school: "abjuração 3",
+    school: "abjuração",
     castTime: "1 minuto",
     range: "3 metros",
     components: "V, S, M",
@@ -1380,12 +1440,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "64",
     name: "Clarividência",
-    school: "adivinhação 3",
+    school: "adivinhação",
     castTime: "10 minutos",
     range: "1,5 quilômetro",
     components: "V, S, M",
@@ -1410,12 +1471,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "65",
     name: "Clone",
-    school: "necromancia 8",
+    school: "necromancia",
     castTime: "1 hora",
     range: "toque",
     components: "V, S, M",
@@ -1428,12 +1490,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "66",
     name: "Coluna de Chamas",
-    school: "evocação 5",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -1446,12 +1509,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "67",
     name: "Comando",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V",
@@ -1468,12 +1532,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "68",
     name: "Compreender Idiomas",
-    school: "adivinhação 1",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -1498,12 +1563,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "69",
     name: "Compulsão",
-    school: "encantamento 4",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -1516,12 +1582,13 @@ export const spells: SpellType[] = [
         id: "1",
         name: "bardo"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "70",
     name: "Comunhão",
-    school: "adivinhação 5",
+    school: "adivinhação",
     castTime: "1 minuto",
     range: "pessoal",
     components: "V, S, M",
@@ -1534,12 +1601,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "71",
     name: "Comunhão com a Natureza",
-    school: "adivinhação 5",
+    school: "adivinhação",
     castTime: "1 minuto",
     range: "pessoal",
     components: "V, S",
@@ -1556,12 +1624,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "72",
     name: "Cone de Frio",
-    school: "evocação 5",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -1578,12 +1647,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "73",
     name: "Confusão",
-    school: "encantamento 4",
+    school: "encantamento",
     castTime: "1 ação",
     range: "27 metros",
     components: "V, S, M",
@@ -1608,12 +1678,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "74",
     name: "Conhecimento Lendário",
-    school: "adivinhação 5",
+    school: "adivinhação",
     castTime: "10 minutos",
     range: "pessoal",
     components: "V, S, M",
@@ -1634,12 +1705,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "75",
     name: "Conjurar Animais",
-    school: "conjuração 3",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -1656,12 +1728,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "76",
     name: "Conjurar Celestial",
-    school: "conjuração 7",
+    school: "conjuração",
     castTime: "1 minuto",
     range: "27 metros",
     components: "V, S",
@@ -1674,12 +1747,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "77",
     name: "Conjurar Elementais Menores",
-    school: "conjuração 4",
+    school: "conjuração",
     castTime: "1 minuto",
     range: "27 metros",
     components: "V, S",
@@ -1696,12 +1770,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "78",
     name: "Conjurar Elemental",
-    school: "conjuração 5",
+    school: "conjuração",
     castTime: "1 minuto",
     range: "27 metros",
     components: "V, S, M",
@@ -1718,12 +1793,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "79",
     name: "Conjurar Fada",
-    school: "conjuração 6",
+    school: "conjuração",
     castTime: "1 minuto",
     range: "27 metros",
     components: "V, S",
@@ -1740,12 +1816,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "80",
     name: "Conjurar Rajada",
-    school: "conjuração 3",
+    school: "conjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -1758,12 +1835,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "81",
     name: "Conjurar Saraivada",
-    school: "conjuração 5",
+    school: "conjuração",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -1776,12 +1854,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "82",
     name: "Conjurar Seres da Floresta",
-    school: "conjuração 4",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -1798,12 +1877,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "83",
     name: "Consagrar",
-    school: "evocação 5",
+    school: "evocação",
     castTime: "24 horas",
     range: "toque",
     components: "V, S, M",
@@ -1816,12 +1896,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "84",
     name: "Consertar",
-    school: "transmutação 0",
+    school: "transmutação",
     castTime: "1 minuto",
     range: "toque",
     components: "V, S, M",
@@ -1850,12 +1931,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "85",
     name: "Constrição",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 ação",
     range: "27 metros",
     components: "V, S",
@@ -1868,12 +1950,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "86",
     name: "Contato Extraplanar",
-    school: "adivinhação 5",
+    school: "adivinhação",
     castTime: "1 minuto",
     range: "pessoal",
     components: "V",
@@ -1890,12 +1973,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "87",
     name: "Contingência",
-    school: "evocação 6",
+    school: "evocação",
     castTime: "10 minutos",
     range: "pessoal",
     components: "V, S, M",
@@ -1908,12 +1992,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "88",
     name: "Contramágica",
-    school: "abjuração 3",
+    school: "abjuração",
     castTime: "1 reação",
     range: "18 metros",
     components: "S",
@@ -1934,12 +2019,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "89",
     name: "Controlar a Água",
-    school: "transmutação 4",
+    school: "transmutação",
     castTime: "1 ação",
     range: "90 metros",
     components: "V, S, M",
@@ -1960,12 +2046,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "90",
     name: "Controlar o Clima",
-    school: "transmutação 8",
+    school: "transmutação",
     castTime: "10 minutos",
     range: "pessoal",
     components: "V, S, M",
@@ -1986,12 +2073,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "91",
     name: "Convocar Familiar",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 hora",
     range: "3 metros",
     components: "V, S, M",
@@ -2004,12 +2092,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "92",
     name: "Convocar Montaria",
-    school: "conjuração 2",
+    school: "conjuração",
     castTime: "10 minutos",
     range: "9 metros",
     components: "V, S",
@@ -2022,12 +2111,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "93",
     name: "Convocar Relâmpagos",
-    school: "conjuração 3",
+    school: "conjuração",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -2040,12 +2130,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "94",
     name: "Cordão de Flechas",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "1,5 metro",
     components: "V, S, M",
@@ -2058,12 +2149,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "95",
     name: "Coroa da Loucura",
-    school: "encantamento 2",
+    school: "encantamento",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -2088,12 +2180,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "96",
     name: "Corrente de Relâmpagos",
-    school: "evocação 6",
+    school: "evocação",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -2110,12 +2203,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "97",
     name: "Crescer Espinhos",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -2132,12 +2226,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "98",
     name: "Criação",
-    school: "ilusão 5",
+    school: "ilusão",
     castTime: "1 minuto",
     range: "9 metros",
     components: "V, S, M",
@@ -2154,12 +2249,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "99",
     name: "Criar Alimentos",
-    school: "conjuração 3",
+    school: "conjuração",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -2176,12 +2272,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "100",
     name: "Criar Chamas",
-    school: "conjuração 0",
+    school: "conjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -2194,12 +2291,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "101",
     name: "Criar Mortos-Vivos",
-    school: "necromancia 6",
+    school: "necromancia",
     castTime: "1 minuto",
     range: "3 metros",
     components: "V, S, M",
@@ -2220,12 +2318,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "102",
     name: "Criar ou Destruir Água",
-    school: "transmutação 1",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -2242,12 +2341,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "103",
     name: "Criar Passagem",
-    school: "transmutação 5",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -2260,12 +2360,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "104",
     name: "Cúpula Antivida",
-    school: "abjuração 5",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -2273,12 +2374,13 @@ export const spells: SpellType[] = [
     concentration: true,
     material: "Uma barreira cintilante se estende de você até 3 metros de raio, e se move com você, permanecendo centrada em você e restringindo criaturas diferentes de mortos-vivos e constructos. A barreira mantem-se pela duração.",
     description: "Se você se mover forçando uma criatura afetada a atravessar a barreira, a magia termina.",
-    classesList: []
+    classesList: [],
+    "nivel": "5"
   },
   {
     id: "105",
     name: "Cura Completa",
-    school: "evocação 6",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -2295,12 +2397,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "106",
     name: "Cura Completa Em Massa",
-    school: "evocação 9",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -2313,12 +2416,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "107",
     name: "Curar Ferimentos",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -2347,12 +2451,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "108",
     name: "Curar Ferimentos Em Massa",
-    school: "evocação 5",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -2369,12 +2474,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "109",
     name: "Dança Irresistível de Otto",
-    school: "encantamento 6",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V",
@@ -2391,12 +2497,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "110",
     name: "Dedo da Morte",
-    school: "necromancia 7",
+    school: "necromancia",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -2417,12 +2524,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "111",
     name: "Desejo",
-    school: "conjuração 9",
+    school: "conjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -2439,12 +2547,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "112",
     name: "Desintegrar",
-    school: "transmutação 6",
+    school: "transmutação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -2461,12 +2570,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "113",
     name: "Despedaçar",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -2491,12 +2601,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "114",
     name: "Despertar",
-    school: "transmutação 5",
+    school: "transmutação",
     castTime: "8 horas",
     range: "toque",
     components: "V, S, M",
@@ -2513,12 +2624,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "115",
     name: "Despistar",
-    school: "ilusão 5",
+    school: "ilusão",
     castTime: "1 ação",
     range: "pessoal",
     components: "S",
@@ -2535,12 +2647,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "116",
     name: "Destruição Banidora",
-    school: "abjuração 5",
+    school: "abjuração",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -2553,12 +2666,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "117",
     name: "Destruição Cegante",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -2571,12 +2685,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "118",
     name: "Destruição Colérica",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -2589,12 +2704,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "119",
     name: "Destruição Estonteante",
-    school: "evocação 4",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -2607,12 +2723,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "120",
     name: "Destruição Lancinante",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -2625,12 +2742,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "121",
     name: "Destruição Trovejante",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -2643,12 +2761,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "122",
     name: "Detectar Magia",
-    school: "adivinhação 1",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -2685,12 +2804,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "123",
     name: "Detectar o Bem e Mal",
-    school: "adivinhação 1",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -2707,12 +2827,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "124",
     name: "Detectar Pensamentos",
-    school: "adivinhação 2",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -2733,12 +2854,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "125",
     name: "Detectar Veneno e Doença",
-    school: "adivinhação 1",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -2763,12 +2885,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "126",
     name: "Dificultar Detecção",
-    school: "abjuração 3",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -2789,12 +2912,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "127",
     name: "Disco Flutuante de Tenser",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -2807,12 +2931,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "128",
     name: "Disfarçar-se",
-    school: "ilusão 1",
+    school: "ilusão",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -2833,12 +2958,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "129",
     name: "Dissipar Magia",
-    school: "abjuração 3",
+    school: "abjuração",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -2875,12 +3001,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "130",
     name: "Dissipar o Bem e Mal",
-    school: "abjuração 5",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -2897,12 +3024,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "131",
     name: "Doença Plena",
-    school: "necromancia 6",
+    school: "necromancia",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -2915,12 +3043,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "132",
     name: "Dominar Besta",
-    school: "encantamento 4",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -2937,12 +3066,13 @@ export const spells: SpellType[] = [
         id: "5",
         name: "feiticeiro"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "133",
     name: "Dominar Monstro",
-    school: "encantamento 8",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -2967,12 +3097,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "134",
     name: "Dominar Pessoa",
-    school: "encantamento 5",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -2993,12 +3124,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "135",
     name: "Druidismo",
-    school: "transmutação 0",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -3011,12 +3143,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "136",
     name: "Duelo Compelido",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação bônus",
     range: "9 metros",
     components: "V",
@@ -3029,12 +3162,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "137",
     name: "Encarnação Fantasmagórica",
-    school: "ilusão 9",
+    school: "ilusão",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -3047,12 +3181,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "138",
     name: "Encontrar Armadilhas",
-    school: "adivinhação 2",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -3073,12 +3208,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "139",
     name: "Encontrar o Caminho",
-    school: "adivinhação 6",
+    school: "adivinhação",
     castTime: "1 minuto",
     range: "pessoal",
     components: "V, S, M",
@@ -3099,12 +3235,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "140",
     name: "Enfeitiçar Pessoa",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -3129,12 +3266,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "141",
     name: "Enfraquecer Intelecto",
-    school: "encantamento 8",
+    school: "encantamento",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -3159,12 +3297,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "142",
     name: "Enviar Mensagem",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação",
     range: "ilimitado",
     components: "V, S, M",
@@ -3185,12 +3324,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "143",
     name: "Escrita Ilusória",
-    school: "ilusão 1",
+    school: "ilusão",
     castTime: "1 minuto",
     range: "toque",
     components: "S, M",
@@ -3211,12 +3351,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "144",
     name: "Escudo Arcano",
-    school: "abjuração 1",
+    school: "abjuração",
     castTime: "1 reação",
     range: "pessoal",
     components: "V, S",
@@ -3233,12 +3374,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "145",
     name: "Escudo da Fé",
-    school: "abjuração 1",
+    school: "abjuração",
     castTime: "1 ação bônus",
     range: "18 metros",
     components: "V, S, M",
@@ -3255,12 +3397,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "146",
     name: "Escudo de Fogo",
-    school: "evocação 4",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -3273,12 +3416,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "147",
     name: "Escuridão",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, M",
@@ -3299,12 +3443,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "148",
     name: "Esfera Congelante de Otiluke",
-    school: "evocação 6",
+    school: "evocação",
     castTime: "1 ação",
     range: "90 metros",
     components: "V, S, M",
@@ -3317,12 +3462,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "149",
     name: "Esfera Flamejante",
-    school: "conjuração 2",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -3339,12 +3485,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "150",
     name: "Esfera Resiliente de Otiluke",
-    school: "evocação 4",
+    school: "evocação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -3357,12 +3504,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "151",
     name: "Espada de Mordenkainen",
-    school: "evocação 7",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -3379,12 +3527,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "152",
     name: "Espíritos Guardiões",
-    school: "conjuração 3",
+    school: "conjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -3397,12 +3546,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "153",
     name: "Espirro Ácido",
-    school: "conjuração 0",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -3419,12 +3569,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "154",
     name: "Esquentar Metal",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -3441,12 +3592,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "155",
     name: "Estabilizar",
-    school: "necromancia 0",
+    school: "necromancia",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -3459,12 +3611,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "156",
     name: "Explosão Solar",
-    school: "evocação 8",
+    school: "evocação",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -3485,12 +3638,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "157",
     name: "Fabricar",
-    school: "transmutação 4",
+    school: "transmutação",
     castTime: "10 minutos",
     range: "36 metros",
     components: "V, S",
@@ -3503,12 +3657,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "158",
     name: "Falar com Animais",
-    school: "adivinhação 1",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -3529,12 +3684,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "159",
     name: "Falar com Os Mortos",
-    school: "necromancia 3",
+    school: "necromancia",
     castTime: "1 ação",
     range: "3 metros",
     components: "V, S, M",
@@ -3551,12 +3707,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "160",
     name: "Falar com Plantas",
-    school: "adivinhação 1",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -3573,12 +3730,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "161",
     name: "Flecha Ácida de Melf",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -3591,12 +3749,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "162",
     name: "Flecha Relampejante",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V, S",
@@ -3609,12 +3768,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "163",
     name: "Fogo das Fadas",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V",
@@ -3631,12 +3791,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "164",
     name: "Fome de Hadar",
-    school: "conjuração 3",
+    school: "conjuração",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -3649,12 +3810,13 @@ export const spells: SpellType[] = [
         id: "2",
         name: "bruxo"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "165",
     name: "Força Fantasmagórica",
-    school: "ilusão 2",
+    school: "ilusão",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -3675,12 +3837,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "166",
     name: "Forjar Morte",
-    school: "necromancia 3",
+    school: "necromancia",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -3705,12 +3868,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "167",
     name: "Forma Etérea",
-    school: "transmutação 7",
+    school: "transmutação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -3739,12 +3903,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "168",
     name: "Forma Gasosa",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -3765,12 +3930,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "169",
     name: "Formas Animais",
-    school: "transmutação 8",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -3783,12 +3949,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "170",
     name: "Glifo de Vigilância",
-    school: "abjuração 3",
+    school: "abjuração",
     castTime: "1 hora",
     range: "toque",
     components: "V, S, M",
@@ -3809,12 +3976,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "171",
     name: "Globo de Invulnerabilidade",
-    school: "abjuração 6",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -3831,12 +3999,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "172",
     name: "Globos de Luz",
-    school: "evocação 0",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -3857,12 +4026,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "173",
     name: "Golpe Constritor",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -3875,12 +4045,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "174",
     name: "Guardião da Fé",
-    school: "conjuração 4",
+    school: "conjuração",
     castTime: "1 ação",
     range: "9 metros",
     components: "V",
@@ -3893,12 +4064,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "175",
     name: "Heroísmo",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -3915,12 +4087,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "176",
     name: "Identificação",
-    school: "adivinhação 1",
+    school: "adivinhação",
     castTime: "1 minuto",
     range: "toque",
     components: "V, S, M",
@@ -3937,12 +4110,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "177",
     name: "Idiomas",
-    school: "adivinhação 3",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "toque",
     components: "V, M",
@@ -3971,12 +4145,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "178",
     name: "Ilusão Menor",
-    school: "ilusão 0",
+    school: "ilusão",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, M",
@@ -4001,12 +4176,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "179",
     name: "Ilusão Programada",
-    school: "ilusão 6",
+    school: "ilusão",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -4023,12 +4199,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "180",
     name: "Imagem Maior",
-    school: "ilusão 3",
+    school: "ilusão",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -4053,12 +4230,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "181",
     name: "Imagem Silenciosa",
-    school: "ilusão 1",
+    school: "ilusão",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -4079,12 +4257,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "182",
     name: "Imobilizar Monstro",
-    school: "encantamento 5",
+    school: "encantamento",
     castTime: "1 ação",
     range: "27 metros",
     components: "V, S, M",
@@ -4109,12 +4288,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "183",
     name: "Imobilizar Pessoa",
-    school: "encantamento 2",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -4147,12 +4327,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "184",
     name: "Infligir Ferimentos",
-    school: "necromancia 1",
+    school: "necromancia",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -4165,12 +4346,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "185",
     name: "Inseto Gigante",
-    school: "transmutação 4",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -4183,12 +4365,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "186",
     name: "Inverter a Gravidade",
-    school: "transmutação 7",
+    school: "transmutação",
     castTime: "1 ação",
     range: "30 metros",
     components: "V, S, M",
@@ -4209,12 +4392,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "187",
     name: "Invisibilidade",
-    school: "ilusão 2",
+    school: "ilusão",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -4239,12 +4423,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "188",
     name: "Invisibilidade Maior",
-    school: "ilusão 4",
+    school: "ilusão",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -4265,12 +4450,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "189",
     name: "Invocação Instantânea de Drawmij",
-    school: "conjuração 6",
+    school: "conjuração",
     castTime: "1 minuto",
     range: "toque",
     components: "V, S, M",
@@ -4283,12 +4469,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "190",
     name: "Isolamento",
-    school: "transmutação 7",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -4301,12 +4488,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "191",
     name: "Labirinto",
-    school: "conjuração 8",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -4319,12 +4507,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "192",
     name: "Lâmina Flamejante",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V, S, M",
@@ -4337,12 +4526,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "193",
     name: "Lentidão",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -4359,12 +4549,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "194",
     name: "Leque Cromático",
-    school: "ilusão 1",
+    school: "ilusão",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -4381,12 +4572,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "195",
     name: "Levitação",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -4403,12 +4595,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "196",
     name: "Ligação Telepática de Rary",
-    school: "adivinhação 5",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -4421,12 +4614,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "197",
     name: "Limpar a Mente",
-    school: "abjuração 8",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -4443,12 +4637,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "198",
     name: "Localizar Animais ou Plantas",
-    school: "adivinhação 2",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -4469,12 +4664,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "199",
     name: "Localizar Criatura",
-    school: "adivinhação 4",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -4507,12 +4703,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "200",
     name: "Localizar Objeto",
-    school: "adivinhação 2",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -4545,12 +4742,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "201",
     name: "Loquacidade",
-    school: "transmutação 8",
+    school: "transmutação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -4567,12 +4765,13 @@ export const spells: SpellType[] = [
         id: "2",
         name: "bruxo"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "202",
     name: "Lufada de Vento",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -4593,12 +4792,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "203",
     name: "Luz",
-    school: "evocação 0",
+    school: "evocação",
     castTime: "1 ação",
     range: "toque",
     components: "V, M",
@@ -4619,12 +4819,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "204",
     name: "Luz do Dia",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -4653,12 +4854,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "205",
     name: "Malogro",
-    school: "necromancia 4",
+    school: "necromancia",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -4683,12 +4885,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "206",
     name: "Mansão Magnífica de Mordenkainen",
-    school: "conjuração 7",
+    school: "conjuração",
     castTime: "1 minuto",
     range: "90 metros",
     components: "V, S, M",
@@ -4705,12 +4908,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "207",
     name: "Manto do Cruzado",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -4723,12 +4927,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "208",
     name: "Mão de Bigby",
-    school: "evocação 5",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -4741,12 +4946,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "209",
     name: "Mãos Flamejantes",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -4763,12 +4969,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "210",
     name: "Mãos Mágicas",
-    school: "conjuração 0",
+    school: "conjuração",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -4793,12 +5000,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "211",
     name: "Marca da Punição",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -4811,12 +5019,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "212",
     name: "Marca do Caçador",
-    school: "adivinhação 1",
+    school: "adivinhação",
     castTime: "1 ação bônus",
     range: "27 metros",
     components: "V",
@@ -4829,12 +5038,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "213",
     name: "Medo",
-    school: "ilusão 3",
+    school: "ilusão",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -4859,12 +5069,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "214",
     name: "Mensageiro Animal",
-    school: "encantamento 2",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -4885,12 +5096,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "215",
     name: "Mensagem",
-    school: "transmutação 0",
+    school: "transmutação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -4911,12 +5123,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "216",
     name: "Mesclar-se Às Rochas",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -4924,12 +5137,13 @@ export const spells: SpellType[] = [
     concentration: false,
     material: "Você entra em um objeto ou superfície rochoso, grande o suficiente para comportar seu corpo inteiro, mesclando-se, junto com todo o equipamento que você esteja carregando, com a rocha pela duração. Usando seu movimento, você entra na rocha num ponto que você possa tocar. Nada da sua presença ficará visível ou, de outra forma, detectável por sentidos não-mágicos.",
     description: "Pequenos danos físicos a rocha não ferem você, mas destruição parcial ou uma mudança no formato (fazendo que você já não caiba mais dentro dela) expelirá você causando-lhe 6d6 de dano de concussão. A destruição completa da rocha (ou transmutação em uma substância diferente) expelirá você causando-lhe 50 de dano de concussão. Se você for expelido, você ficará caído no chão em um espaço desocupado perto de onde você entrou da primeira vez.",
-    classesList: []
+    classesList: [],
+    "nivel": "3"
   },
   {
     id: "217",
     name: "Metamorfose",
-    school: "transmutação 4",
+    school: "transmutação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -4954,12 +5168,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "218",
     name: "Metamorfose Verdadeira",
-    school: "transmutação 9",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -4980,12 +5195,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "219",
     name: "Miragem",
-    school: "ilusão 7",
+    school: "ilusão",
     castTime: "10 minutos",
     range: "visão",
     components: "V, S",
@@ -5006,12 +5222,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "220",
     name: "Missão",
-    school: "encantamento 5",
+    school: "encantamento",
     castTime: "1 minuto",
     range: "18 metros",
     components: "V",
@@ -5040,12 +5257,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "221",
     name: "Mísseis Mágicos",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -5062,12 +5280,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "222",
     name: "Modificar Memória",
-    school: "encantamento 5",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -5084,12 +5303,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "223",
     name: "Moldar Rochas",
-    school: "transmutação 4",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -5110,12 +5330,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "224",
     name: "Montaria Fantasmagórica",
-    school: "ilusão 3",
+    school: "ilusão",
     castTime: "1 minuto",
     range: "9 metros",
     components: "V, S",
@@ -5128,12 +5349,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "225",
     name: "Mover Terra",
-    school: "transmutação 6",
+    school: "transmutação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -5154,12 +5376,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "226",
     name: "Movimentação Livre",
-    school: "abjuração 4",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -5184,12 +5407,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "227",
     name: "Muralha de Energia",
-    school: "evocação 5",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -5202,12 +5426,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "228",
     name: "Muralha de Espinhos",
-    school: "conjuração 6",
+    school: "conjuração",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -5220,12 +5445,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "229",
     name: "Muralha de Fogo",
-    school: "evocação 4",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -5246,12 +5472,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "230",
     name: "Muralha de Gelo",
-    school: "evocação 6",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -5264,12 +5491,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "231",
     name: "Muralha de Pedra",
-    school: "conjuração 5",
+    school: "conjuração",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -5290,12 +5518,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "232",
     name: "Muralha de Vento",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -5312,12 +5541,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "233",
     name: "Muralha Prismática",
-    school: "abjuração 9",
+    school: "abjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -5330,12 +5560,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "234",
     name: "Nevasca",
-    school: "conjuração 3",
+    school: "conjuração",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S, M",
@@ -5356,12 +5587,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "235",
     name: "Névoa Fétida",
-    school: "conjuração 3",
+    school: "conjuração",
     castTime: "1 ação",
     range: "27 metros",
     components: "V, S, M",
@@ -5382,12 +5614,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "236",
     name: "Névoa Mortal",
-    school: "conjuração 5",
+    school: "conjuração",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -5404,12 +5637,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "237",
     name: "Névoa Obscurecente",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -5434,12 +5668,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "238",
     name: "Nublar",
-    school: "ilusão 2",
+    school: "ilusão",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -5456,12 +5691,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "239",
     name: "Nuvem de Adagas",
-    school: "conjuração 2",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -5486,12 +5722,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "240",
     name: "Nuvem Incendiária",
-    school: "conjuração 8",
+    school: "conjuração",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S",
@@ -5508,12 +5745,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "241",
     name: "Olho Arcano",
-    school: "adivinhação 4",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -5526,12 +5764,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "242",
     name: "Onda Destrutiva",
-    school: "evocação 5",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -5544,12 +5783,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "243",
     name: "Onda Trovejante",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -5574,12 +5814,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "244",
     name: "Oração Curativa",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "10 minutos",
     range: "9 metros",
     components: "V",
@@ -5592,12 +5833,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "245",
     name: "Orbe Cromática",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação",
     range: "27 metros",
     components: "V, S, M",
@@ -5614,12 +5856,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "246",
     name: "Orientação",
-    school: "adivinhação 0",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -5636,12 +5879,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "247",
     name: "Padrão Hipnótico",
-    school: "ilusão 3",
+    school: "ilusão",
     castTime: "1 ação",
     range: "36 metros",
     components: "S, M",
@@ -5666,12 +5910,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "248",
     name: "Palavra Curativa",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "18 metros",
     components: "V",
@@ -5692,12 +5937,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "249",
     name: "Palavra Curativa Em Massa",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "18 metros",
     components: "V",
@@ -5714,12 +5960,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "250",
     name: "Palavra de Poder Atordoar",
-    school: "encantamento 8",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V",
@@ -5744,12 +5991,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "251",
     name: "Palavra de Poder Curar",
-    school: "evocação 9",
+    school: "evocação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -5762,12 +6010,13 @@ export const spells: SpellType[] = [
         id: "1",
         name: "bardo"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "252",
     name: "Palavra de Poder Matar",
-    school: "encantamento 9",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V",
@@ -5792,12 +6041,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "253",
     name: "Palavra de Recordação",
-    school: "conjuração 6",
+    school: "conjuração",
     castTime: "1 ação",
     range: "1,5 metro",
     components: "V",
@@ -5810,12 +6060,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "254",
     name: "Palavra Divina",
-    school: "evocação 7",
+    school: "evocação",
     castTime: "1 ação bônus",
     range: "9 metros",
     components: "V",
@@ -5828,12 +6079,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "255",
     name: "Parar o Tempo",
-    school: "transmutação 9",
+    school: "transmutação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V",
@@ -5850,12 +6102,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "256",
     name: "Passo Nebuloso",
-    school: "conjuração 2",
+    school: "conjuração",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -5876,12 +6129,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "257",
     name: "Passos Longos",
-    school: "transmutação 1",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -5906,12 +6160,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "258",
     name: "Passos Sem Pegadas",
-    school: "abjuração 2",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -5928,12 +6183,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "259",
     name: "Patas de Aranha",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -5954,12 +6210,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "260",
     name: "Pele de Árvore",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -5976,12 +6233,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "261",
     name: "Pele de Pedra",
-    school: "abjuração 4",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -6006,12 +6264,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "262",
     name: "Pequena Cabana de Leomund",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 minuto",
     range: "pessoal",
     components: "V, S, M",
@@ -6028,12 +6287,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "263",
     name: "Perdição",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -6050,12 +6310,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "264",
     name: "Piscar",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -6072,12 +6333,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "265",
     name: "Porta Dimensional",
-    school: "conjuração 4",
+    school: "conjuração",
     castTime: "1 ação",
     range: "150 metros",
     components: "V",
@@ -6102,12 +6364,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "266",
     name: "Portal",
-    school: "conjuração 9",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -6128,12 +6391,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "267",
     name: "Portal Arcano",
-    school: "conjuração 6",
+    school: "conjuração",
     castTime: "1 ação",
     range: "150 metros",
     components: "V, S",
@@ -6154,12 +6418,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "268",
     name: "Praga",
-    school: "necromancia 5",
+    school: "necromancia",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -6176,12 +6441,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "269",
     name: "Praga de Insetos",
-    school: "conjuração 5",
+    school: "conjuração",
     castTime: "1 ação",
     range: "90 metros",
     components: "V, S, M",
@@ -6202,12 +6468,13 @@ export const spells: SpellType[] = [
         id: "5",
         name: "feiticeiro"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "270",
     name: "Prestidigitação",
-    school: "transmutação 0",
+    school: "transmutação",
     castTime: "1 ação",
     range: "3 metros",
     components: "V, S",
@@ -6232,12 +6499,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "271",
     name: "Prisão de Energia",
-    school: "evocação 7",
+    school: "evocação",
     castTime: "1 ação",
     range: "30 metros",
     components: "V, S, M",
@@ -6258,12 +6526,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "272",
     name: "Proibição",
-    school: "abjuração 6",
+    school: "abjuração",
     castTime: "10 minutos",
     range: "toque",
     components: "V, S, M",
@@ -6276,12 +6545,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "273",
     name: "Projeção Astral",
-    school: "necromancia 9",
+    school: "necromancia",
     castTime: "1 hora",
     range: "3 metros",
     components: "V, S, M",
@@ -6302,12 +6572,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "274",
     name: "Projetar Imagem",
-    school: "ilusão 7",
+    school: "ilusão",
     castTime: "1 ação",
     range: "750 quilômetros",
     components: "V, S, M",
@@ -6324,12 +6595,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "275",
     name: "Proteção contra a Morte",
-    school: "abjuração 4",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -6346,12 +6618,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "276",
     name: "Proteção contra Energia",
-    school: "abjuração 3",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -6380,12 +6653,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "277",
     name: "Proteção contra Lâminas",
-    school: "abjuração 0",
+    school: "abjuração",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -6410,12 +6684,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "278",
     name: "Proteção contra o Bem e Mal",
-    school: "abjuração 1",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -6440,12 +6715,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "279",
     name: "Proteção contra Veneno",
-    school: "abjuração 2",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -6470,12 +6746,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "280",
     name: "Proteger Fortaleza",
-    school: "abjuração 6",
+    school: "abjuração",
     castTime: "10 minutos",
     range: "toque",
     components: "V, S, M",
@@ -6492,12 +6769,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "281",
     name: "Purificar Alimentos",
-    school: "transmutação 1",
+    school: "transmutação",
     castTime: "1 ação",
     range: "3 metros",
     components: "V, S",
@@ -6518,12 +6796,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "282",
     name: "Queda Suave",
-    school: "transmutação 1",
+    school: "transmutação",
     castTime: "1 reação",
     range: "18 metros",
     components: "V, M",
@@ -6544,12 +6823,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "283",
     name: "Raio Adoecente",
-    school: "necromancia 1",
+    school: "necromancia",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -6566,12 +6846,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "284",
     name: "Raio Ardente",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -6588,12 +6869,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "285",
     name: "Raio de Bruxa",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -6614,12 +6896,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "286",
     name: "Raio de Fogo",
-    school: "evocação 0",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -6636,12 +6919,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "287",
     name: "Raio de Gelo",
-    school: "evocação 0",
+    school: "evocação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -6658,12 +6942,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "288",
     name: "Raio do Enfraquecimento",
-    school: "necromancia 2",
+    school: "necromancia",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -6680,12 +6965,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "289",
     name: "Raio Guiador",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -6698,12 +6984,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "290",
     name: "Raio Lunar",
-    school: "evocação 2",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -6716,12 +7003,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "291",
     name: "Raio Solar",
-    school: "evocação 6",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -6742,12 +7030,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "292",
     name: "Rajada de Veneno",
-    school: "conjuração 0",
+    school: "conjuração",
     castTime: "1 ação",
     range: "3 metros",
     components: "V, S",
@@ -6772,12 +7061,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "293",
     name: "Rajada Mística",
-    school: "evocação 0",
+    school: "evocação",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -6790,12 +7080,13 @@ export const spells: SpellType[] = [
         id: "2",
         name: "bruxo"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "294",
     name: "Rajada Prismática",
-    school: "evocação 7",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -6812,12 +7103,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "295",
     name: "Recipiente Arcano",
-    school: "necromancia 6",
+    school: "necromancia",
     castTime: "1 minuto",
     range: "pessoal",
     components: "V, S, M",
@@ -6830,12 +7122,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "296",
     name: "Recuo Acelerado",
-    school: "transmutação 1",
+    school: "transmutação",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V, S",
@@ -6856,12 +7149,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "297",
     name: "Reencarnação",
-    school: "transmutação 5",
+    school: "transmutação",
     castTime: "1 hora",
     range: "toque",
     components: "V, S, M",
@@ -6874,12 +7168,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "298",
     name: "Reflexos",
-    school: "ilusão 2",
+    school: "ilusão",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -6900,12 +7195,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "299",
     name: "Regeneração",
-    school: "transmutação 7",
+    school: "transmutação",
     castTime: "1 minuto",
     range: "toque",
     components: "V, S, M",
@@ -6926,12 +7222,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "300",
     name: "Relâmpago",
-    school: "evocação 3",
+    school: "evocação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -6948,12 +7245,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "301",
     name: "Remover Maldição",
-    school: "abjuração 3",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -6978,12 +7276,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "302",
     name: "Repouso Tranquilo",
-    school: "necromancia 2",
+    school: "necromancia",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -7000,12 +7299,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "303",
     name: "Repreensão Infernal",
-    school: "evocação 1",
+    school: "evocação",
     castTime: "1 reação",
     range: "18 metros",
     components: "V, S",
@@ -7018,12 +7318,13 @@ export const spells: SpellType[] = [
         id: "2",
         name: "bruxo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "304",
     name: "Resistência",
-    school: "abjuração 0",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -7040,12 +7341,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "305",
     name: "Respirar Na Água",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -7070,12 +7372,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "306",
     name: "Ressurreição",
-    school: "necromancia 7",
+    school: "necromancia",
     castTime: "1 hora",
     range: "toque",
     components: "V, S, M",
@@ -7092,12 +7395,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "307",
     name: "Ressurreição Verdadeira",
-    school: "necromancia 9",
+    school: "necromancia",
     castTime: "1 hora",
     range: "toque",
     components: "V, S, M",
@@ -7114,12 +7418,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "308",
     name: "Restauração Maior",
-    school: "abjuração 5",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -7140,12 +7445,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "309",
     name: "Restauração Menor",
-    school: "abjuração 2",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -7174,12 +7480,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "310",
     name: "Reviver Os Mortos",
-    school: "necromancia 5",
+    school: "necromancia",
     castTime: "1 hora",
     range: "toque",
     components: "V, S, M",
@@ -7200,12 +7507,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "311",
     name: "Revivificar",
-    school: "necromancia 3",
+    school: "necromancia",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -7222,12 +7530,13 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "312",
     name: "Riso Histérico de Tasha",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S, M",
@@ -7244,12 +7553,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "313",
     name: "Rogar Maldição",
-    school: "necromancia 3",
+    school: "necromancia",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -7270,12 +7580,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "314",
     name: "Salto",
-    school: "transmutação 1",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -7300,12 +7611,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "315",
     name: "Santuário",
-    school: "abjuração 1",
+    school: "abjuração",
     castTime: "1 ação bônus",
     range: "9 metros",
     components: "V, S, M",
@@ -7318,12 +7630,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "316",
     name: "Santuário Particular de Mordenkainen",
-    school: "abjuração 4",
+    school: "abjuração",
     castTime: "10 minutos",
     range: "36 metros",
     components: "V, S, M",
@@ -7336,12 +7649,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "317",
     name: "Saraivada de Espinhos",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 ação bônus",
     range: "pessoal",
     components: "V",
@@ -7354,12 +7668,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "318",
     name: "Semiplano",
-    school: "conjuração 8",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V",
@@ -7376,12 +7691,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "319",
     name: "Sentido Bestial",
-    school: "adivinhação 2",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "toque",
     components: "S",
@@ -7398,12 +7714,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "320",
     name: "Servo Invisível",
-    school: "conjuração 1",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -7424,12 +7741,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "321",
     name: "Sexto Sentido",
-    school: "adivinhação 9",
+    school: "adivinhação",
     castTime: "1 minuto",
     range: "toque",
     components: "V, S, M",
@@ -7454,12 +7772,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "322",
     name: "Silêncio",
-    school: "ilusão 2",
+    school: "ilusão",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -7480,12 +7799,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "323",
     name: "Símbolo",
-    school: "abjuração 7",
+    school: "abjuração",
     castTime: "1 minuto",
     range: "toque",
     components: "V, S, M",
@@ -7506,12 +7826,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "324",
     name: "Similaridade",
-    school: "ilusão 5",
+    school: "ilusão",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -7532,12 +7853,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "325",
     name: "Simulacro",
-    school: "ilusão 7",
+    school: "ilusão",
     castTime: "12 horas",
     range: "toque",
     components: "V, S, M",
@@ -7550,12 +7872,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "326",
     name: "Sinal de Esperança",
-    school: "abjuração 3",
+    school: "abjuração",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, S",
@@ -7568,12 +7891,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "327",
     name: "Sonho",
-    school: "ilusão 5",
+    school: "ilusão",
     castTime: "1 minuto",
     range: "especial",
     components: "V, S, M",
@@ -7594,12 +7918,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "328",
     name: "Sono",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S, M",
@@ -7620,12 +7945,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "329",
     name: "Sugestão",
-    school: "encantamento 2",
+    school: "encantamento",
     castTime: "1 ação",
     range: "9 metros",
     components: "V, M",
@@ -7650,12 +7976,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "330",
     name: "Sugestão Em Massa",
-    school: "encantamento 6",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, M",
@@ -7680,12 +8007,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "331",
     name: "Sussurros Dissonantes",
-    school: "encantamento 1",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V",
@@ -7698,12 +8026,13 @@ export const spells: SpellType[] = [
         id: "1",
         name: "bardo"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "332",
     name: "Taumaturgia",
-    school: "transmutação 0",
+    school: "transmutação",
     castTime: "1 ação",
     range: "9 metros",
     components: "V",
@@ -7716,12 +8045,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "333",
     name: "Teia",
-    school: "conjuração 2",
+    school: "conjuração",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -7738,12 +8068,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "334",
     name: "Telecinésia",
-    school: "transmutação 5",
+    school: "transmutação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -7760,12 +8091,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "335",
     name: "Telepatia",
-    school: "adivinhação 8",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "ilimitado",
     components: "V, S, M",
@@ -7778,12 +8110,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "336",
     name: "Teletransporte",
-    school: "conjuração 7",
+    school: "conjuração",
     castTime: "1 ação",
     range: "3 metros",
     components: "V",
@@ -7804,12 +8137,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "337",
     name: "Teletransporte Por Árvores",
-    school: "conjuração 6",
+    school: "conjuração",
     castTime: "1 ação",
     range: "3 metros",
     components: "V, S",
@@ -7822,12 +8156,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "338",
     name: "Tempestade da Vingança",
-    school: "conjuração 9",
+    school: "conjuração",
     castTime: "1 ação",
     range: "visão",
     components: "V, S",
@@ -7840,12 +8175,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "9"
   },
   {
     id: "339",
     name: "Tempestade de Fogo",
-    school: "evocação 7",
+    school: "evocação",
     castTime: "1 ação",
     range: "45 metros",
     components: "V, S",
@@ -7866,12 +8202,13 @@ export const spells: SpellType[] = [
         id: "5",
         name: "feiticeiro"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "340",
     name: "Tempestade de Gelo",
-    school: "evocação 4",
+    school: "evocação",
     castTime: "1 ação",
     range: "90 metros",
     components: "V, S, M",
@@ -7892,12 +8229,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "341",
     name: "Tentáculos Negros de Evard",
-    school: "conjuração 4",
+    school: "conjuração",
     castTime: "1 ação",
     range: "27 metros",
     components: "V, S, M",
@@ -7910,12 +8248,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "342",
     name: "Terremoto",
-    school: "evocação 8",
+    school: "evocação",
     castTime: "1 ação",
     range: "150 metros",
     components: "V, S, M",
@@ -7936,12 +8275,13 @@ export const spells: SpellType[] = [
         id: "5",
         name: "feiticeiro"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "343",
     name: "Terreno Alucinógeno",
-    school: "ilusão 4",
+    school: "ilusão",
     castTime: "10 minutos",
     range: "90 metros",
     components: "V, S, M",
@@ -7966,12 +8306,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "344",
     name: "Toque Arrepiante",
-    school: "necromancia 0",
+    school: "necromancia",
     castTime: "1 ação",
     range: "36 metros",
     components: "V, S",
@@ -7992,12 +8333,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "345",
     name: "Toque Chocante",
-    school: "evocação 0",
+    school: "evocação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S",
@@ -8014,12 +8356,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "346",
     name: "Toque Vampírico",
-    school: "necromancia 3",
+    school: "necromancia",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S",
@@ -8036,12 +8379,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "347",
     name: "Tranca Arcana",
-    school: "abjuração 2",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -8054,12 +8398,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "348",
     name: "Truque de Corda",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -8072,12 +8417,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "349",
     name: "Tsunami",
-    school: "conjuração 8",
+    school: "conjuração",
     castTime: "1 minuto",
     range: "visão",
     components: "V, S",
@@ -8090,12 +8436,13 @@ export const spells: SpellType[] = [
         id: "4",
         name: "druida"
       }
-    ]
+    ],
+    "nivel": "8"
   },
   {
     id: "350",
     name: "Velocidade",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S, M",
@@ -8112,12 +8459,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "351",
     name: "Ver o Invisível",
-    school: "adivinhação 2",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -8138,12 +8486,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "352",
     name: "Viagem Planar",
-    school: "conjuração 7",
+    school: "conjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -8172,12 +8521,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "7"
   },
   {
     id: "353",
     name: "Vidência",
-    school: "adivinhação 5",
+    school: "adivinhação",
     castTime: "10 minutos",
     range: "pessoal",
     components: "V, S, M",
@@ -8206,12 +8556,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "5"
   },
   {
     id: "354",
     name: "Vínculo Protetor",
-    school: "abjuração 2",
+    school: "abjuração",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -8224,12 +8575,13 @@ export const spells: SpellType[] = [
         id: "3",
         name: "clérigo"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "355",
     name: "Vinha Esmagadora",
-    school: "conjuração 4",
+    school: "conjuração",
     castTime: "1 ação bônus",
     range: "9 metros",
     components: "V, S",
@@ -8246,12 +8598,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "4"
   },
   {
     id: "356",
     name: "Visão da Verdade",
-    school: "adivinhação 6",
+    school: "adivinhação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -8280,12 +8633,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "6"
   },
   {
     id: "357",
     name: "Visão No Escuro",
-    school: "transmutação 2",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -8310,12 +8664,13 @@ export const spells: SpellType[] = [
         id: "8",
         name: "patrulheiro"
       }
-    ]
+    ],
+    "nivel": "2"
   },
   {
     id: "358",
     name: "Vitalidade Falsa",
-    school: "necromancia 1",
+    school: "necromancia",
     castTime: "1 ação",
     range: "pessoal",
     components: "V, S, M",
@@ -8332,12 +8687,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "1"
   },
   {
     id: "359",
     name: "Voo",
-    school: "transmutação 3",
+    school: "transmutação",
     castTime: "1 ação",
     range: "toque",
     components: "V, S, M",
@@ -8358,12 +8714,13 @@ export const spells: SpellType[] = [
         id: "6",
         name: "mago"
       }
-    ]
+    ],
+    "nivel": "3"
   },
   {
     id: "360",
     name: "Zombaria Viciosa",
-    school: "encantamento 0",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V",
@@ -8376,12 +8733,13 @@ export const spells: SpellType[] = [
         id: "1",
         name: "bardo"
       }
-    ]
+    ],
+    "nivel": "0"
   },
   {
     id: "361",
     name: "Zona da Verdade",
-    school: "encantamento 2",
+    school: "encantamento",
     castTime: "1 ação",
     range: "18 metros",
     components: "V, S",
@@ -8402,6 +8760,7 @@ export const spells: SpellType[] = [
         id: "7",
         name: "paladino"
       }
-    ]
+    ],
+    "nivel": "2"
   }
 ]
