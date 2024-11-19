@@ -1,4 +1,6 @@
-export const spells = [
+import { SpellType } from "../interfaces";
+
+export const spells: SpellType[] = [
   {
     id: "1",
     name: "Acalmar Emoções",

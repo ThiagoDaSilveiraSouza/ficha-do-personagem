@@ -1,6 +1,6 @@
 import { ClassesType } from "../interfaces/ClassesType";
 
-export const classess: ClassesType[] = [
+export const classes: ClassesType[] = [
   {
     id: "1",
     name: "bardo",
