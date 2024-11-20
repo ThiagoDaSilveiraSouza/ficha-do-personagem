@@ -94,6 +94,7 @@ const PropertieContainer = styled.div`
   margin-bottom: 4px;
   color: #444;
   font-weight: 500;
+  text-align: start;
 
   span {
     font-weight: 400;
@@ -103,6 +104,9 @@ const PropertieContainer = styled.div`
 
 const DescriptionContainer = styled.div`
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
 
   h6 {
     margin: 0;
@@ -115,6 +119,8 @@ const DescriptionContainer = styled.div`
     font-size: 0.9rem;
     color: #555;
     line-height: 1.5;
+    text-align: justify;
+    overflow-y: auto;
   }
 `;
 

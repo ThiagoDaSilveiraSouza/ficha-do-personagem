@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SpellsCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: start;
   gap: 20px;
 `;
 
@@ -16,6 +16,13 @@ export const SpellsColumns = styled.div`
 
 export const FilterContainer = styled.div`
   margin-bottom: 30px;
+`;
+
+export const FilterTitle = styled.h3`
+  /* color: black; */
+`;
+export const FilterSubtitle = styled.h4`
+  color: black;
 `;
 
 export const SearchInput = styled.input`
