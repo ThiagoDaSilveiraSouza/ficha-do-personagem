@@ -1,10 +1,13 @@
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 import { SpellType } from "../../../../interfaces";
 import { useState } from "react";
+import { schools } from "../../../../data/schools";
 
 const Card = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  height: fit-content;
 
   width: 100%;
   max-width: 320px;
@@ -21,19 +24,25 @@ const Card = styled.div`
   }
 `;
 
-const HeaderContainer = styled.div`
+type HeaderContainerProps = {
+  $backgroundcolor?: CSSProperties["backgroundColor"];
+};
+
+const HeaderContainer = styled.div<HeaderContainerProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background: #f9f9f9;
+  background: ${({ $backgroundcolor = "#f9f9f9" }) => $backgroundcolor};
   border-bottom: 1px solid #e0e0e0;
 
   h5 {
     font-size: 1rem;
     font-weight: 500;
     margin: 0;
-    color: #333;
+    color: rgb(80, 80, 80);
+    color: rgb(30, 30, 30);
+    color: rgb(50, 50, 50);
   }
 `;
 
@@ -130,10 +139,15 @@ type SpellCardType = {
 
 export const SpellCard = ({ currentCard }: SpellCardType) => {
   const [isOpen, setIsOpen] = useState(false);
+  const headerColor = schools.find(
+    ({ name }) => name === currentCard.school
+  )?.color;
+
+  console.log("headerColor", headerColor);
 
   return (
     <Card>
-      <HeaderContainer>
+      <HeaderContainer $backgroundcolor={headerColor}>
         <h5>{currentCard.name}</h5>
         <HiddenCardButton
           $isopen={isOpen}
