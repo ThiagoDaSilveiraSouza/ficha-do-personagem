@@ -16,14 +16,12 @@ export const SpellNivelContainer = styled.div`
   padding: 20px 0;
 `;
 
-export const SpellNivelDisplay = styled.div<{ $isshow: string }>`
+export const SpellNivelDisplay = styled.div`
   flex: 1 1 320px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  height: ${({ $isshow }) => ($isshow === "true" ? "500px" : "0")};
-  padding: ${({ $isshow }) => ($isshow === "true" ? "20px 0" : "0")};
   transition: 0.3s;
   overflow: auto;
 `;

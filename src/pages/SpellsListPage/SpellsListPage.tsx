@@ -71,6 +71,25 @@ export const SpellsListPage = () => {
             </CheckboxOption>
           ))}
         </RadioGroupContainer>
+        <RadioGroupContainer>
+          <FilterSubtitle>Escolas</FilterSubtitle>
+          {Object.entries(nivelContainerOpenList).map(([nivel, { status }]) => (
+            <CheckboxOption key={"nivel-filter-" + nivel}>
+              <input
+                type="checkbox"
+                name="classes"
+                checked={status}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                  nivelContainerToggle(
+                    nivel as nivelsProps,
+                    event.target.checked
+                  )
+                }
+              />
+              <span>{nivel === "0" ? "Truques" : "nível " + nivel}</span>
+            </CheckboxOption>
+          ))}
+        </RadioGroupContainer>
       </FilterContainer>
       <SearchInput
         value={searchInputValue}
@@ -82,10 +101,7 @@ export const SpellsListPage = () => {
           ([currentNivel, currentSpellList], index) => {
             const currentNivelTitle =
               currentNivel === "0" ? "Truques" : currentNivel + " nível:";
-            const isShow =
-              nivelContainerOpenList[
-                currentNivel as keyof typeof nivelContainerOpenList
-              ].status.toString();
+
             return (
               <SpellNivelContainer key={"spell-column-" + index}>
                 <NivelTitleContainer>
@@ -100,7 +116,7 @@ export const SpellsListPage = () => {
                     }
                   />
                 </NivelTitleContainer>
-                <SpellNivelDisplay $isshow={isShow}>
+                <SpellNivelDisplay>
                   {currentSpellList.map((currentCard) => {
                     return (
                       <SpellCard

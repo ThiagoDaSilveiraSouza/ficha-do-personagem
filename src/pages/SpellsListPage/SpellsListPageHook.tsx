@@ -36,18 +36,19 @@ const defaultSchoolsStatus = schools.reduce<defaultStatusProps>(
   {}
 );
 
-const nivelContainerOpenListDefault = {
-  "0": { status: false },
-  "1": { status: false },
-  "2": { status: false },
-  "3": { status: false },
-  "4": { status: false },
-  "5": { status: false },
-  "6": { status: false },
-  "7": { status: false },
-  "8": { status: false },
-  "9": { status: false },
-};
+const nivelContainerOpenListDefault: Record<nivelsProps, { status: boolean }> =
+  {
+    "0": { status: false },
+    "1": { status: false },
+    "2": { status: false },
+    "3": { status: false },
+    "4": { status: false },
+    "5": { status: false },
+    "6": { status: false },
+    "7": { status: false },
+    "8": { status: false },
+    "9": { status: false },
+  };
 
 export const SpellsListPageHook = () => {
   const [searchInputValue, setSearchInputValue] = useState("");
@@ -55,13 +56,13 @@ export const SpellsListPageHook = () => {
     useState(defaultClassStatus);
   const [schoolsInputState, setSchoolsInputState] =
     useState(defaultSchoolsStatus);
-  const [nivelContainerOpenList, setNivelContainerOpenList] = useState(
+  const [nivelsInputState, setNivelsInputState] = useState(
     nivelContainerOpenListDefault
   );
 
   const nivelContainerToggle = useCallback(
     (nivel: nivelsProps, status: boolean) => {
-      setNivelContainerOpenList((prevState) => {
+      setNivelsInputState((prevState) => {
         const updatedState = { ...prevState };
         const targetNivel = nivel as keyof typeof updatedState;
         updatedState[targetNivel].status = status;
@@ -76,6 +77,7 @@ export const SpellsListPageHook = () => {
     filterBySearchInput,
     filterByClass,
     filterBySchool,
+    filterByNivel,
   ].reduce((filteredSpells, currentFilter) => {
     return currentFilter(filteredSpells);
   }, spells);
@@ -149,6 +151,21 @@ export const SpellsListPageHook = () => {
     });
   }
 
+  function filterByNivel(spellList: SpellType[]) {
+    const hasAnyNivelSelected = Object.values(nivelsInputState).some(
+      ({ status }) => status
+    );
+
+    if (!hasAnyNivelSelected) {
+      return spellList;
+    }
+    return spellList.filter((currentSpell) => {
+      const { nivel } = currentSpell;
+      const hasSomeNivel = nivelsInputState[nivel].status;
+      return hasSomeNivel;
+    });
+  }
+
   function filterBySearchInput(spellList: SpellType[]) {
     return spellList.filter((currentSpell) => {
       const filterHasName = currentSpell.name.includes(searchInputValue);
@@ -161,7 +178,7 @@ export const SpellsListPageHook = () => {
     // spellsByColumns,
     spellsByNivel,
     searchInputValue,
-    nivelContainerOpenList,
+    nivelContainerOpenList: nivelsInputState,
     setSearchInputValue,
     spellFilterClassInputHandleCheck,
     spellFilterSchoolInputHandleCheck,
