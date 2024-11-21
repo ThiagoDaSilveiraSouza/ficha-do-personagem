@@ -35,6 +35,7 @@ const HeaderContainer = styled.div<HeaderContainerProps>`
   padding: 10px;
   background: ${({ $backgroundcolor = "#f9f9f9" }) => $backgroundcolor};
   border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
 
   h5 {
     font-size: 1rem;
@@ -142,22 +143,24 @@ export const SpellCard = ({ currentCard }: SpellCardType) => {
   const headerColor = schools.find(
     ({ name }) => name === currentCard.school
   )?.color;
-
-  console.log("headerColor", headerColor);
+  const nivelText =
+    currentCard.nivel === "0" ? "Truque" : "nivel " + currentCard.nivel;
 
   return (
     <Card>
-      <HeaderContainer $backgroundcolor={headerColor}>
+      <HeaderContainer
+        $backgroundcolor={headerColor}
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
         <h5>{currentCard.name}</h5>
         <HiddenCardButton
           $isopen={isOpen}
           aria-label={isOpen ? "Fechar detalhes" : "Abrir detalhes"}
-          onClick={() => setIsOpen((prev) => !prev)}
         />
       </HeaderContainer>
       <BodyContainer $isopen={isOpen}>
         <PropertieContainer>
-          Nível: <span>{currentCard.nivel}</span>
+          Nível: <span>{nivelText}</span>
         </PropertieContainer>
         <PropertieContainer>
           Escola: <span>{currentCard.school}</span>

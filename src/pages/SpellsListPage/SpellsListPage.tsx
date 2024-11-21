@@ -9,24 +9,30 @@ import {
   RadioGroupContainer,
   SearchInput,
   SpellsCardsContainer,
-  SpellsColumns,
+  SpellNivelDisplay,
+  SpellNivelContainer,
+  NivelTitleContainer,
+  NivelTitle,
 } from "./style";
 import { schools } from "../../data/schools";
+import { nivelsProps } from "../../interfaces";
 
 export const SpellsListPage = () => {
   const {
-    spellsByColumns,
     searchInputValue,
+    spellsByNivel,
+    nivelContainerOpenList,
     setSearchInputValue,
     spellFilterClassInputHandleCheck,
     spellFilterSchoolInputHandleCheck,
+    nivelContainerToggle,
   } = SpellsListPageHook();
 
   return (
     <div>
       <h1>Lista de Magias</h1>
+      <FilterTitle>Filtros</FilterTitle>
       <FilterContainer>
-        <FilterTitle>Filtros</FilterTitle>
         <RadioGroupContainer>
           <FilterSubtitle>Classe</FilterSubtitle>
           {classes.map((currentClass) => (
@@ -65,27 +71,49 @@ export const SpellsListPage = () => {
             </CheckboxOption>
           ))}
         </RadioGroupContainer>
-        <SearchInput
-          value={searchInputValue}
-          onChange={(event) => setSearchInputValue(event.target.value)}
-          placeholder="Pesquisar"
-        />
       </FilterContainer>
+      <SearchInput
+        value={searchInputValue}
+        onChange={(event) => setSearchInputValue(event.target.value)}
+        placeholder="Pesquisar"
+      />
       <SpellsCardsContainer>
-        {spellsByColumns.map((currentColumn, index) => {
-          return (
-            <SpellsColumns key={"spell-column-" + index}>
-              {currentColumn.map((currentCard) => {
-                return (
-                  <SpellCard
-                    currentCard={currentCard}
-                    key={"spell-card-" + currentCard.id}
+        {Object.entries(spellsByNivel).map(
+          ([currentNivel, currentSpellList], index) => {
+            const currentNivelTitle =
+              currentNivel === "0" ? "Truques" : currentNivel + " nível:";
+            const isShow =
+              nivelContainerOpenList[
+                currentNivel as keyof typeof nivelContainerOpenList
+              ].status.toString();
+            return (
+              <SpellNivelContainer key={"spell-column-" + index}>
+                <NivelTitleContainer>
+                  <NivelTitle>{currentNivelTitle}</NivelTitle>
+                  <input
+                    type="checkbox"
+                    onChange={(event) =>
+                      nivelContainerToggle(
+                        currentNivel as nivelsProps,
+                        event.target.checked
+                      )
+                    }
                   />
-                );
-              })}
-            </SpellsColumns>
-          );
-        })}
+                </NivelTitleContainer>
+                <SpellNivelDisplay $isshow={isShow}>
+                  {currentSpellList.map((currentCard) => {
+                    return (
+                      <SpellCard
+                        currentCard={currentCard}
+                        key={"spell-card-" + currentCard.id}
+                      />
+                    );
+                  })}
+                </SpellNivelDisplay>
+              </SpellNivelContainer>
+            );
+          }
+        )}
       </SpellsCardsContainer>
     </div>
   );

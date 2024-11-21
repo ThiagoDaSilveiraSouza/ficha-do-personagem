@@ -1,21 +1,49 @@
 import styled from "styled-components";
 
 export const SpellsCardsContainer = styled.div`
+  flex: 1 1 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
   gap: 20px;
 `;
 
-export const SpellsColumns = styled.div`
-  flex: 0 1 320px;
+export const SpellNivelContainer = styled.div`
+  flex: 1 1 100%;
+  background: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 20px 0;
+`;
+
+export const SpellNivelDisplay = styled.div<{ $isshow: string }>`
+  flex: 1 1 320px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  height: ${({ $isshow }) => ($isshow === "true" ? "500px" : "0")};
+  padding: ${({ $isshow }) => ($isshow === "true" ? "20px 0" : "0")};
+  transition: 0.3s;
+  overflow: auto;
+`;
+export const NivelTitleContainer = styled.label`
+  input {
+    display: none;
+  }
+`;
+export const NivelTitle = styled.h3`
+  color: black;
+  margin: 0;
+  padding: 10px;
 `;
 
 export const FilterContainer = styled.div`
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 `;
 
 export const FilterTitle = styled.h3`
@@ -43,6 +71,7 @@ export const SearchInput = styled.input`
 `;
 
 export const RadioGroupContainer = styled.div`
+  flex: 0 1 200px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
