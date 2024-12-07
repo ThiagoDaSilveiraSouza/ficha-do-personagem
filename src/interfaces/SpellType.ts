@@ -21,6 +21,6 @@ export type SpellType = {
   duration: string;
   concentration: boolean;
   material: string;
-  description: string;
+  description: string[];
   classesList: { id: string; name: string }[];
 };

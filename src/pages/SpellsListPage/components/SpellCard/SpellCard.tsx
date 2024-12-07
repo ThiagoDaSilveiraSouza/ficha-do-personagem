@@ -124,13 +124,32 @@ const DescriptionContainer = styled.div`
     font-size: 1rem;
     color: #333;
   }
-
-  p {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
-    text-align: justify;
+  div {
     overflow-y: auto;
+    padding: 0 10px;
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f4f4f4;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
 `;
 
@@ -179,7 +198,11 @@ export const SpellCard = ({ currentCard }: SpellCardType) => {
         </PropertieContainer>
         <DescriptionContainer>
           <h6>Descrição</h6>
-          <p>{currentCard.description}</p>
+          <div>
+            {currentCard.description.map((currentDescription) => (
+              <p>{currentDescription}</p>
+            ))}
+          </div>
         </DescriptionContainer>
       </BodyContainer>
     </Card>
