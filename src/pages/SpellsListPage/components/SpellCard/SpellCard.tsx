@@ -199,8 +199,10 @@ export const SpellCard = ({ currentCard }: SpellCardType) => {
         <DescriptionContainer>
           <h6>Descrição</h6>
           <div>
-            {currentCard.description.map((currentDescription) => (
-              <p>{currentDescription}</p>
+            {currentCard.description.map((currentDescription, index) => (
+              <p key={"spell" + currentCard.id + "-paragraph-" + index}>
+                {currentDescription}
+              </p>
             ))}
           </div>
         </DescriptionContainer>
