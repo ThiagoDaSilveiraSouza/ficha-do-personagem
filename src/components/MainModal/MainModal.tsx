@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 const ModalContainer = styled.div<{ $isopen: string }>`
@@ -66,7 +66,7 @@ const ModalCardClosebutton = styled.button`
 `;
 
 type MainModalProps = {
-  useModal: [boolean, Dispatch<SetStateAction<boolean>>];
+  useModal: [boolean, (isOpen: boolean) => void];
   children?: ReactNode;
 };
 
