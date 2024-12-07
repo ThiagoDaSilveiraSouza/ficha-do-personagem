@@ -16,7 +16,7 @@ type defaultModalContextValueProps = {
   [key in keyof typeof Modals]: ModalsProps;
 };
 const defaultModalContextValue: defaultModalContextValueProps = {
-  SpellModal: { isOpen: true },
+  SpellModal: { isOpen: false },
 };
 
 type ModalsContextProps = [
