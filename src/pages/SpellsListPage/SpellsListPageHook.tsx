@@ -59,6 +59,8 @@ export const SpellsListPageHook = () => {
     useState(defaultSchoolsStatus);
   const [nivelsInputState, setNivelsInputState] = useState(defaultNivelsStatus);
   const FilterFormRef = useRef<HTMLFormElement>(null);
+  const [spellsContainerOpenStatus, setSpellsContainerOpenStatus] =
+    useState(defaultNivelsStatus);
 
   const nivelContainerToggle = useCallback(
     (nivel: nivelsProps, status: boolean) => {
@@ -194,6 +196,15 @@ export const SpellsListPageHook = () => {
     setNivelsInputState(resetFilter);
   }
 
+  const updateSpellsContainerOpenStatus = (
+    containerPropName: keyof typeof spellsContainerOpenStatus,
+    updateStatus: boolean
+  ) =>
+    setSpellsContainerOpenStatus((prevState) => ({
+      ...prevState,
+      [containerPropName]: { status: updateStatus },
+    }));
+
   return {
     // spellsByColumns,
     classesInputState,
@@ -203,11 +214,13 @@ export const SpellsListPageHook = () => {
     searchInputValue,
     filterContainerIsOpen,
     FilterFormRef,
+    spellsContainerOpenStatus,
     clearFilters,
     setFilterContainerIsOpen,
     setSearchInputValue,
     spellFilterClassInputHandleCheck,
     spellFilterSchoolInputHandleCheck,
     nivelContainerToggle,
+    updateSpellsContainerOpenStatus,
   };
 };

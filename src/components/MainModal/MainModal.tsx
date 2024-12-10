@@ -12,7 +12,7 @@ const ModalContainer = styled.div<{ $isopen: string }>`
   height: 100%;
   opacity: ${({ $isopen }) => ($isopen === "true" ? "1" : "0")};
   visibility: ${({ $isopen }) => ($isopen === "true" ? "visible" : "hidden")};
-  transition: 0.3s opacity visibility;
+  transition: 0.3s;
 `;
 const ModalBackground = styled.div`
   position: absolute;
@@ -38,7 +38,8 @@ const ModalCard = styled.div<ModalCardProps>`
   box-shadow: 0 0 3px 0 gray;
   transform: ${({ $isopen }) =>
     $isopen === "true" ? "translateY(0)" : "translateY(-100%)"};
-  transition: 0.3s transform;
+  opacity: ${({ $isopen }) => ($isopen === "true" ? "1" : "0")};
+  transition: 0.3s;
 `;
 const ModalCardClosebutton = styled.button`
   position: absolute;
