@@ -1,8 +1,9 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { spells } from "../../data/spells";
 import { nivelsProps, SpellType } from "../../interfaces";
 import { classes } from "../../data/classes";
 import { schools } from "../../data/schools";
+import { slugfy } from "../../utils";
 
 type defaultStatusProps = {
   [key: string]: {
@@ -36,29 +37,28 @@ const defaultSchoolsStatus = schools.reduce<defaultStatusProps>(
   {}
 );
 
-const nivelContainerOpenListDefault: Record<nivelsProps, { status: boolean }> =
-  {
-    "0": { status: false },
-    "1": { status: false },
-    "2": { status: false },
-    "3": { status: false },
-    "4": { status: false },
-    "5": { status: false },
-    "6": { status: false },
-    "7": { status: false },
-    "8": { status: false },
-    "9": { status: false },
-  };
+const defaultNivelsStatus: Record<nivelsProps, { status: boolean }> = {
+  "0": { status: false },
+  "1": { status: false },
+  "2": { status: false },
+  "3": { status: false },
+  "4": { status: false },
+  "5": { status: false },
+  "6": { status: false },
+  "7": { status: false },
+  "8": { status: false },
+  "9": { status: false },
+};
 
 export const SpellsListPageHook = () => {
   const [searchInputValue, setSearchInputValue] = useState("");
+  const [filterContainerIsOpen, setFilterContainerIsOpen] = useState(false);
   const [classesInputState, setClassesInputState] =
     useState(defaultClassStatus);
   const [schoolsInputState, setSchoolsInputState] =
     useState(defaultSchoolsStatus);
-  const [nivelsInputState, setNivelsInputState] = useState(
-    nivelContainerOpenListDefault
-  );
+  const [nivelsInputState, setNivelsInputState] = useState(defaultNivelsStatus);
+  const FilterFormRef = useRef<HTMLFormElement>(null);
 
   const nivelContainerToggle = useCallback(
     (nivel: nivelsProps, status: boolean) => {
@@ -127,10 +127,11 @@ export const SpellsListPageHook = () => {
     }
     return spellList.filter((currentSpell) => {
       const { classesList } = currentSpell;
-      const hasSomeClass = classesList.some(
-        ({ name }) =>
-          classesInputState?.[name as keyof typeof classesInputState]?.status
-      );
+
+      const hasSomeClass = classesList.some(({ name }) => {
+        return classesInputState?.[name as keyof typeof classesInputState]
+          ?.status;
+      });
       return hasSomeClass;
     });
   }
@@ -168,17 +169,42 @@ export const SpellsListPageHook = () => {
 
   function filterBySearchInput(spellList: SpellType[]) {
     return spellList.filter((currentSpell) => {
-      const filterHasName = currentSpell.name.includes(searchInputValue);
+      const filterHasName = slugfy(currentSpell.name).includes(
+        slugfy(searchInputValue)
+      );
 
       return filterHasName;
     });
   }
 
+  const resetFilter = <T extends { [key: string]: { status: boolean } }>(
+    targetObject: T
+  ) => {
+    const updatedObject = { ...targetObject };
+
+    for (let key in updatedObject) {
+      updatedObject[key].status = false;
+    }
+    return updatedObject;
+  };
+
+  function clearFilters() {
+    setClassesInputState(resetFilter);
+    setSchoolsInputState(resetFilter);
+    setNivelsInputState(resetFilter);
+  }
+
   return {
     // spellsByColumns,
+    classesInputState,
+    schoolsInputState,
+    nivelsInputState,
     spellsByNivel,
     searchInputValue,
-    nivelContainerOpenList: nivelsInputState,
+    filterContainerIsOpen,
+    FilterFormRef,
+    clearFilters,
+    setFilterContainerIsOpen,
     setSearchInputValue,
     spellFilterClassInputHandleCheck,
     spellFilterSchoolInputHandleCheck,

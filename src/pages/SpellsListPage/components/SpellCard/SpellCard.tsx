@@ -2,15 +2,14 @@ import styled, { CSSProperties } from "styled-components";
 import { SpellType } from "../../../../interfaces";
 import { useState } from "react";
 import { schools } from "../../../../data/schools";
+import { UseModalsContext, UseSelectedData } from "../../../../context";
 
 const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
   height: fit-content;
-
-  width: 100%;
-  max-width: 320px;
+  width: 320px;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -84,74 +83,74 @@ const HiddenCardButton = styled.button<HiddenCardButtonType>`
   }
 `;
 
-type BodyContainerProps = {
-  $isopen: boolean;
-};
+// type BodyContainerProps = {
+//   $isopen: boolean;
+// };
 
-const BodyContainer = styled.div<BodyContainerProps>`
-  position: relative;
-  padding: ${({ $isopen }) => ($isopen ? "16px" : "0 16px")};
-  box-sizing: border-box;
-  max-height: ${({ $isopen }) => ($isopen ? "500px" : "0")};
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  background: #fff;
-  color: #555;
-  font-size: 0.95rem;
-`;
+// const BodyContainer = styled.div<BodyContainerProps>`
+//   position: relative;
+//   padding: ${({ $isopen }) => ($isopen ? "16px" : "0 16px")};
+//   box-sizing: border-box;
+//   max-height: ${({ $isopen }) => ($isopen ? "500px" : "0")};
+//   overflow: hidden;
+//   transition: max-height 0.4s ease, padding 0.4s ease;
+//   background: #fff;
+//   color: #555;
+//   font-size: 0.95rem;
+// `;
 
-const PropertieContainer = styled.div`
-  margin-bottom: 4px;
-  color: #444;
-  font-weight: 500;
-  text-align: start;
+// const PropertieContainer = styled.div`
+//   margin-bottom: 4px;
+//   color: #444;
+//   font-weight: 500;
+//   text-align: start;
 
-  span {
-    font-weight: 400;
-    color: #666;
-  }
-`;
+//   span {
+//     font-weight: 400;
+//     color: #666;
+//   }
+// `;
 
-const DescriptionContainer = styled.div`
-  margin-top: 16px;
-  display: flex;
-  flex-direction: column;
-  height: 200px;
+// const DescriptionContainer = styled.div`
+//   margin-top: 16px;
+//   display: flex;
+//   flex-direction: column;
+//   height: 200px;
 
-  h6 {
-    margin: 0;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    color: #333;
-  }
-  div {
-    overflow-y: auto;
-    padding: 0 10px;
-    p {
-      font-size: 0.9rem;
-      color: #555;
-      line-height: 1.5;
-      text-align: justify;
-    }
+//   h6 {
+//     margin: 0;
+//     margin-bottom: 8px;
+//     font-size: 1rem;
+//     color: #333;
+//   }
+//   div {
+//     overflow-y: auto;
+//     padding: 0 10px;
+//     p {
+//       font-size: 0.9rem;
+//       color: #555;
+//       line-height: 1.5;
+//       text-align: justify;
+//     }
 
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
+//     &::-webkit-scrollbar {
+//       width: 6px;
+//     }
 
-    &::-webkit-scrollbar-track {
-      background: #f4f4f4;
-    }
+//     &::-webkit-scrollbar-track {
+//       background: #f4f4f4;
+//     }
 
-    &::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 10px;
-    }
+//     &::-webkit-scrollbar-thumb {
+//       background: #888;
+//       border-radius: 10px;
+//     }
 
-    &::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
-  }
-`;
+//     &::-webkit-scrollbar-thumb:hover {
+//       background: #555;
+//     }
+//   }
+// `;
 
 type SpellCardType = {
   currentCard: SpellType;
@@ -159,25 +158,31 @@ type SpellCardType = {
 
 export const SpellCard = ({ currentCard }: SpellCardType) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { updateSelectedData } = UseSelectedData();
+  const { updateModalProps } = UseModalsContext();
   const headerColor = schools.find(
     ({ name }) => name === currentCard.school
   )?.color;
-  const nivelText =
-    currentCard.nivel === "0" ? "Truque" : "nivel " + currentCard.nivel;
+  // const nivelText =
+  //   currentCard.nivel === "0" ? "Truque" : "nivel " + currentCard.nivel;
 
   return (
     <Card>
       <HeaderContainer
         $backgroundcolor={headerColor}
-        onClick={() => setIsOpen((prev) => !prev)}
+        // onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() => {
+          updateSelectedData("selectedSpell", currentCard);
+          updateModalProps("SpellModal", "isOpen", true);
+        }}
       >
         <h5>{currentCard.name}</h5>
-        <HiddenCardButton
+        {/* <HiddenCardButton
           $isopen={isOpen}
           aria-label={isOpen ? "Fechar detalhes" : "Abrir detalhes"}
-        />
+        /> */}
       </HeaderContainer>
-      <BodyContainer $isopen={isOpen}>
+      {/* <BodyContainer $isopen={isOpen}>
         <PropertieContainer>
           Nível: <span>{nivelText}</span>
         </PropertieContainer>
@@ -206,7 +211,7 @@ export const SpellCard = ({ currentCard }: SpellCardType) => {
             ))}
           </div>
         </DescriptionContainer>
-      </BodyContainer>
+      </BodyContainer> */}
     </Card>
   );
 };

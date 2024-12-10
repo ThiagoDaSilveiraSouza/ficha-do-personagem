@@ -1,11 +1,10 @@
 import { SpellCard } from "./components";
 import { SpellsListPageHook } from "./SpellsListPageHook";
-import { classes } from "../../data/classes";
 import {
   CheckboxOption,
   FilterContainer,
   FilterSubtitle,
-  FilterTitle,
+  FilterButton,
   RadioGroupContainer,
   SearchInput,
   SpellsCardsContainer,
@@ -13,80 +12,92 @@ import {
   SpellNivelContainer,
   NivelTitleContainer,
   NivelTitle,
+  FilterButtonContainer,
 } from "./style";
-import { schools } from "../../data/schools";
 import { nivelsProps } from "../../interfaces";
+import { PageContainer } from "../../componetsStyled";
 
 export const SpellsListPage = () => {
   const {
+    classesInputState,
+    schoolsInputState,
+    nivelsInputState,
     searchInputValue,
     spellsByNivel,
-    nivelContainerOpenList,
+    filterContainerIsOpen,
+    FilterFormRef,
+    clearFilters,
     setSearchInputValue,
     spellFilterClassInputHandleCheck,
     spellFilterSchoolInputHandleCheck,
     nivelContainerToggle,
+    setFilterContainerIsOpen,
   } = SpellsListPageHook();
 
   return (
-    <div>
+    <PageContainer $alingitems="center">
       <h1>Lista de Magias</h1>
-      <FilterTitle>Filtros</FilterTitle>
-      <FilterContainer>
+      <FilterButtonContainer>
+        <FilterButton
+          onClick={() => setFilterContainerIsOpen((prevState) => !prevState)}
+        >
+          Filtros
+        </FilterButton>
+        <FilterButton onClick={() => clearFilters()}>
+          Limpar filtros
+        </FilterButton>
+      </FilterButtonContainer>
+      <FilterContainer
+        $isopen={filterContainerIsOpen.toString()}
+        ref={FilterFormRef}
+      >
         <RadioGroupContainer>
           <FilterSubtitle>Classe</FilterSubtitle>
-          {classes.map((currentClass) => (
-            <CheckboxOption key={currentClass.id}>
+          {Object.keys(classesInputState).map((key, index) => (
+            <CheckboxOption key={"classe-" + key + index}>
               <input
                 type="checkbox"
                 name="classes"
-                value={currentClass.name}
+                value={key}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                  spellFilterClassInputHandleCheck(
-                    currentClass.name,
-                    event.target.checked
-                  )
+                  spellFilterClassInputHandleCheck(key, event.target.checked)
                 }
+                checked={classesInputState[key].status}
               />
-              <span>{currentClass.name}</span>
+              <span>{key}</span>
             </CheckboxOption>
           ))}
         </RadioGroupContainer>
         <RadioGroupContainer>
           <FilterSubtitle>Escolas</FilterSubtitle>
-          {schools.map((currentSchool) => (
-            <CheckboxOption key={currentSchool.id}>
+          {Object.keys(schoolsInputState).map((key, index) => (
+            <CheckboxOption key={"school-" + key + index}>
               <input
                 type="checkbox"
                 name="classes"
-                value={currentSchool.name}
+                value={key}
+                checked={schoolsInputState[key].status}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                  spellFilterSchoolInputHandleCheck(
-                    currentSchool.name,
-                    event.target.checked
-                  )
+                  spellFilterSchoolInputHandleCheck(key, event.target.checked)
                 }
               />
-              <span>{currentSchool.name}</span>
+              <span>{key}</span>
             </CheckboxOption>
           ))}
         </RadioGroupContainer>
         <RadioGroupContainer>
-          <FilterSubtitle>Escolas</FilterSubtitle>
-          {Object.entries(nivelContainerOpenList).map(([nivel, { status }]) => (
-            <CheckboxOption key={"nivel-filter-" + nivel}>
+          <FilterSubtitle>Nível </FilterSubtitle>
+          {Object.keys(nivelsInputState).map((key) => (
+            <CheckboxOption key={"nivel-filter-" + key}>
               <input
                 type="checkbox"
                 name="classes"
-                checked={status}
+                checked={nivelsInputState[key as nivelsProps].status}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                  nivelContainerToggle(
-                    nivel as nivelsProps,
-                    event.target.checked
-                  )
+                  nivelContainerToggle(key as nivelsProps, event.target.checked)
                 }
               />
-              <span>{nivel === "0" ? "Truques" : "nível " + nivel}</span>
+              <span>{key === "0" ? "Truques" : "nível " + key}</span>
             </CheckboxOption>
           ))}
         </RadioGroupContainer>
@@ -131,6 +142,6 @@ export const SpellsListPage = () => {
           }
         )}
       </SpellsCardsContainer>
-    </div>
+    </PageContainer>
   );
 };

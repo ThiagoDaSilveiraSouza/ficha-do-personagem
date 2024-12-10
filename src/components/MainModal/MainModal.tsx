@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import { ReactNode, useEffect } from "react";
+import styled, { CSSProperties } from "styled-components";
 
 const ModalContainer = styled.div<{ $isopen: string }>`
   position: fixed;
@@ -23,11 +23,18 @@ const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 `;
-const ModalCard = styled.div<{ $isopen: string }>`
+
+type ModalCardProps = {
+  $isopen: string;
+  $padding?: CSSProperties["padding"];
+  $backgroundcolor?: CSSProperties["backgroundColor"];
+};
+
+const ModalCard = styled.div<ModalCardProps>`
   position: relative;
-  padding: 30px;
+  padding: ${({ $padding = "30px" }) => $padding};
   box-sizing: border-box;
-  background: white;
+  background: ${({ $backgroundcolor = "white" }) => $backgroundcolor};
   box-shadow: 0 0 3px 0 gray;
   transform: ${({ $isopen }) =>
     $isopen === "true" ? "translateY(0)" : "translateY(-100%)"};
@@ -47,6 +54,7 @@ const ModalCardClosebutton = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
+  z-index: 1;
 
   &::before,
   &::after {
@@ -67,16 +75,31 @@ const ModalCardClosebutton = styled.button`
 
 type MainModalProps = {
   useModal: [boolean, (isOpen: boolean) => void];
+  cardPadding?: CSSProperties["padding"];
+  cardBackgroundColor?: CSSProperties["backgroundColor"];
   children?: ReactNode;
 };
 
-export const MainModal = ({ useModal, children }: MainModalProps) => {
+export const MainModal = ({
+  useModal,
+  cardPadding,
+  cardBackgroundColor,
+  children,
+}: MainModalProps) => {
   const [isOpen, setIsOpen] = useModal;
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }, [isOpen]);
 
   return (
     <ModalContainer $isopen={isOpen.toString()}>
       <ModalBackground onClick={() => setIsOpen(false)} />
-      <ModalCard $isopen={isOpen.toString()}>
+      <ModalCard
+        $isopen={isOpen.toString()}
+        $padding={cardPadding}
+        $backgroundcolor={cardBackgroundColor}
+      >
         <ModalCardClosebutton onClick={() => setIsOpen(false)} />
         {children}
       </ModalCard>

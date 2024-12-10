@@ -9,11 +9,12 @@ export const SpellsCardsContainer = styled.div`
 `;
 
 export const SpellNivelContainer = styled.div`
+  width: 100%;
   flex: 1 1 100%;
   background: white;
   border-radius: 8px;
   box-sizing: border-box;
-  padding: 20px 0;
+  padding: 20px;
 `;
 
 export const SpellNivelDisplay = styled.div`
@@ -36,15 +37,35 @@ export const NivelTitle = styled.h3`
   padding: 10px;
 `;
 
-export const FilterContainer = styled.div`
+type FilterContainerProps = {
+  $isopen: string;
+};
+
+export const FilterContainer = styled.form<FilterContainerProps>`
   margin-bottom: 30px;
   display: flex;
-  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: ${({ $isopen }) => ($isopen === "true" ? "fit-content" : "0px")};
+  transition: 0.3s height;
+  overflow: hidden;
 `;
 
-export const FilterTitle = styled.h3`
+export const FilterButtonContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-self: flex-end;
+`;
+
+export const FilterButton = styled.button`
+  margin-bottom: 10px;
   /* color: black; */
 `;
 export const FilterSubtitle = styled.h4`
@@ -62,6 +83,7 @@ export const SearchInput = styled.input`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   outline: none;
   transition: border-color 0.2s;
+  justify-self: center;
 
   &:focus {
     border-color: #007bff;
@@ -74,12 +96,11 @@ export const RadioGroupContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  margin-bottom: 16px;
   padding: 8px 12px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
 `;
 
 export const RadioOption = styled.label`
