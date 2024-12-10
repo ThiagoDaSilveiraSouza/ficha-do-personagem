@@ -48,43 +48,6 @@ const HeaderContainer = styled.div<HeaderContainerProps>`
   }
 `;
 
-type HiddenCardButtonType = {
-  $isopen: string;
-};
-
-const HiddenCardButton = styled.button<HiddenCardButtonType>`
-  background: none;
-  border: none;
-  padding: 8px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  outline: none !important;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.05);
-  }
-
-  &:focus {
-    outline: 2px solid #1976d2;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-bottom: 2px solid #333;
-    border-right: 2px solid #333;
-    transform: ${({ $isopen }) =>
-      $isopen === "true" ? "rotate(-135deg)" : "rotate(45deg)"};
-    transition: transform 0.3s ease;
-  }
-`;
-
 type BodyContainerProps = {
   $isopen: string;
 };
