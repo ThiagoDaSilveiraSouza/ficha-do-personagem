@@ -13,10 +13,12 @@ import {
   NivelTitleContainer,
   NivelTitle,
   FilterButtonContainer,
+  FiltersListContainer,
 } from "./style";
-import { nivelsProps } from "../../interfaces";
+import { ClassesType, NivelsProps, SchoolsType } from "../../interfaces";
 import { PageContainer } from "../../componetsStyled";
-import { Acordion } from "../../components";
+import { Acordion, MainModal } from "../../components";
+import { FcClearFilters, FcFilledFilter, FcCollapse } from "react-icons/fc";
 
 export const SpellsListPage = () => {
   const {
@@ -26,7 +28,6 @@ export const SpellsListPage = () => {
     searchInputValue,
     spellsByNivel,
     filterContainerIsOpen,
-    FilterFormRef,
     spellsContainerOpenStatus,
     clearFilters,
     setSearchInputValue,
@@ -45,72 +46,80 @@ export const SpellsListPage = () => {
           onClick={() => setFilterContainerIsOpen((prevState) => !prevState)}
         >
           Filtros
-        </FilterButton>
-        <FilterButton onClick={() => clearFilters()}>
-          Limpar filtros
+          <FcFilledFilter />
         </FilterButton>
       </FilterButtonContainer>
-      <Acordion isOpen={filterContainerIsOpen} style={{ margin: "20px 0" }}>
-        <FilterContainer
-          // $isopen={filterContainerIsOpen.toString()}
-          $isopen={"true"}
-          ref={FilterFormRef}
-        >
-          <RadioGroupContainer>
-            <FilterSubtitle>Classe</FilterSubtitle>
-            {Object.keys(classesInputState).map((key, index) => (
-              <CheckboxOption key={"classe-" + key + index}>
-                <input
-                  type="checkbox"
-                  name="classes"
-                  value={key}
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                    spellFilterClassInputHandleCheck(key, event.target.checked)
-                  }
-                  checked={classesInputState[key].status}
-                />
-                <span>{key}</span>
-              </CheckboxOption>
-            ))}
-          </RadioGroupContainer>
-          <RadioGroupContainer>
-            <FilterSubtitle>Escolas</FilterSubtitle>
-            {Object.keys(schoolsInputState).map((key, index) => (
-              <CheckboxOption key={"school-" + key + index}>
-                <input
-                  type="checkbox"
-                  name="classes"
-                  value={key}
-                  checked={schoolsInputState[key].status}
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                    spellFilterSchoolInputHandleCheck(key, event.target.checked)
-                  }
-                />
-                <span>{key}</span>
-              </CheckboxOption>
-            ))}
-          </RadioGroupContainer>
-          <RadioGroupContainer>
-            <FilterSubtitle>Nível </FilterSubtitle>
-            {Object.keys(nivelsInputState).map((key) => (
-              <CheckboxOption key={"nivel-filter-" + key}>
-                <input
-                  type="checkbox"
-                  name="classes"
-                  checked={nivelsInputState[key as nivelsProps].status}
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                    nivelContainerToggle(
-                      key as nivelsProps,
-                      event.target.checked
-                    )
-                  }
-                />
-                <span>{key === "0" ? "Truques" : "nível " + key}</span>
-              </CheckboxOption>
-            ))}
-          </RadioGroupContainer>
+      <MainModal useModal={[filterContainerIsOpen, setFilterContainerIsOpen]}>
+        <FilterContainer>
+          <FilterButtonContainer>
+            <FilterButton onClick={() => clearFilters()} type="button">
+              Limpar filtros <FcClearFilters />
+            </FilterButton>
+          </FilterButtonContainer>
+          <FiltersListContainer>
+            <RadioGroupContainer>
+              <FilterSubtitle>Classe</FilterSubtitle>
+              {Object.keys(classesInputState).map((key, index) => (
+                <CheckboxOption key={"classe-" + key + index}>
+                  <input
+                    type="checkbox"
+                    name="classes"
+                    value={key}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                      spellFilterClassInputHandleCheck(
+                        key as keyof ClassesType,
+                        event.target.checked
+                      )
+                    }
+                    checked={classesInputState[key as keyof ClassesType].status}
+                  />
+                  <span>{key}</span>
+                </CheckboxOption>
+              ))}
+            </RadioGroupContainer>
+            <RadioGroupContainer>
+              <FilterSubtitle>Escolas</FilterSubtitle>
+              {Object.keys(schoolsInputState).map((key, index) => (
+                <CheckboxOption key={"school-" + key + index}>
+                  <input
+                    type="checkbox"
+                    name="classes"
+                    value={key}
+                    checked={schoolsInputState[key as keyof SchoolsType].status}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                      spellFilterSchoolInputHandleCheck(
+                        key as keyof SchoolsType,
+                        event.target.checked
+                      )
+                    }
+                  />
+                  <span>{key}</span>
+                </CheckboxOption>
+              ))}
+            </RadioGroupContainer>
+            <RadioGroupContainer>
+              <FilterSubtitle>Nível </FilterSubtitle>
+              {Object.keys(nivelsInputState).map((key) => (
+                <CheckboxOption key={"nivel-filter-" + key}>
+                  <input
+                    type="checkbox"
+                    name="classes"
+                    checked={nivelsInputState[key as NivelsProps].status}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                      nivelContainerToggle(
+                        key as NivelsProps,
+                        event.target.checked
+                      )
+                    }
+                  />
+                  <span>{key === "0" ? "Truques" : "nível " + key}</span>
+                </CheckboxOption>
+              ))}
+            </RadioGroupContainer>
+          </FiltersListContainer>
         </FilterContainer>
-      </Acordion>
+      </MainModal>
+
       <SearchInput
         value={searchInputValue}
         onChange={(event) => setSearchInputValue(event.target.value)}
@@ -123,6 +132,8 @@ export const SpellsListPage = () => {
               currentNivel === "0" ? "Truques" : currentNivel + " nível:";
             const currentContainerisOpen =
               currentNivel as keyof typeof spellsContainerOpenStatus;
+            const isOpen =
+              !!spellsContainerOpenStatus[currentContainerisOpen]?.status;
 
             return (
               <SpellNivelContainer key={"spell-column-" + index}>
@@ -130,17 +141,15 @@ export const SpellsListPage = () => {
                   onClick={() =>
                     updateSpellsContainerOpenStatus(
                       currentContainerisOpen,
-                      !spellsContainerOpenStatus[currentContainerisOpen]?.status
+                      !isOpen
                     )
                   }
                 >
-                  <NivelTitle>{currentNivelTitle}</NivelTitle>
+                  <NivelTitle $isopen={isOpen.toString()}>
+                    {currentNivelTitle} <FcCollapse fill="black" />
+                  </NivelTitle>
                 </NivelTitleContainer>
-                <Acordion
-                  isOpen={
-                    !!spellsContainerOpenStatus[currentContainerisOpen]?.status
-                  }
-                >
+                <Acordion isOpen={isOpen}>
                   <SpellNivelDisplay>
                     {currentSpellList.map((currentCard) => {
                       return (

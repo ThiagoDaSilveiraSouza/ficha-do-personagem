@@ -8,7 +8,8 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: start;
   height: fit-content;
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;

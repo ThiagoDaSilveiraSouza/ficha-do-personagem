@@ -28,6 +28,7 @@ type ModalCardProps = {
   $isopen: string;
   $padding?: CSSProperties["padding"];
   $backgroundcolor?: CSSProperties["backgroundColor"];
+  $overflow?: CSSProperties["overflow"];
 };
 
 const ModalCard = styled.div<ModalCardProps>`
@@ -40,6 +41,9 @@ const ModalCard = styled.div<ModalCardProps>`
     $isopen === "true" ? "translateY(0)" : "translateY(-100%)"};
   opacity: ${({ $isopen }) => ($isopen === "true" ? "1" : "0")};
   transition: 0.3s;
+  max-width: 90%;
+  max-height: 95%;
+  overflow: ${({ $overflow = "hidden" }) => $overflow};
 `;
 const ModalCardClosebutton = styled.button`
   position: absolute;
@@ -78,6 +82,7 @@ type MainModalProps = {
   useModal: [boolean, (isOpen: boolean) => void];
   cardPadding?: CSSProperties["padding"];
   cardBackgroundColor?: CSSProperties["backgroundColor"];
+  cardOverflow?: CSSProperties["overflow"];
   children?: ReactNode;
 };
 
@@ -85,6 +90,7 @@ export const MainModal = ({
   useModal,
   cardPadding,
   cardBackgroundColor,
+  cardOverflow,
   children,
 }: MainModalProps) => {
   const [isOpen, setIsOpen] = useModal;
@@ -99,6 +105,7 @@ export const MainModal = ({
       <ModalCard
         $isopen={isOpen.toString()}
         $padding={cardPadding}
+        $overflow={cardOverflow}
         $backgroundcolor={cardBackgroundColor}
       >
         <ModalCardClosebutton onClick={() => setIsOpen(false)} />

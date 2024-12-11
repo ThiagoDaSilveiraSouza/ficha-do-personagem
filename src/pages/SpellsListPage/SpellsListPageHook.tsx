@@ -1,17 +1,17 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { spells } from "../../data/spells";
-import { nivelsProps, SpellType } from "../../interfaces";
+import {
+  ClassesType,
+  DefaultStatusProps,
+  NivelsProps,
+  SchoolsType,
+  SpellType,
+} from "../../interfaces";
 import { classes } from "../../data/classes";
 import { schools } from "../../data/schools";
-import { slugfy } from "../../utils";
+import { getStorage, setStorage, slugfy } from "../../utils";
 
-type defaultStatusProps = {
-  [key: string]: {
-    status: boolean;
-  };
-};
-
-const defaultClassStatus = classes.reduce<defaultStatusProps>(
+const defaultClassStatus = classes.reduce<DefaultStatusProps<ClassesType>>(
   (classStatus, currentClass) => {
     const updatedClassStatus = { ...classStatus };
     const className = currentClass.name as keyof typeof updatedClassStatus;
@@ -21,10 +21,10 @@ const defaultClassStatus = classes.reduce<defaultStatusProps>(
 
     return updatedClassStatus;
   },
-  {} as defaultStatusProps
+  {} as DefaultStatusProps<ClassesType>
 );
 
-const defaultSchoolsStatus = schools.reduce<defaultStatusProps>(
+const defaultSchoolsStatus = schools.reduce<DefaultStatusProps<SchoolsType>>(
   (defaultSchoolStatus, currentSchools) => {
     const updatedSchoolStatus = { ...defaultSchoolStatus };
     const schoolName = currentSchools.name as keyof typeof updatedSchoolStatus;
@@ -34,10 +34,10 @@ const defaultSchoolsStatus = schools.reduce<defaultStatusProps>(
 
     return updatedSchoolStatus;
   },
-  {}
+  {} as DefaultStatusProps<SchoolsType>
 );
 
-const defaultNivelsStatus: Record<nivelsProps, { status: boolean }> = {
+const defaultNivelsStatus: DefaultStatusProps<Record<NivelsProps, any>> = {
   "0": { status: false },
   "1": { status: false },
   "2": { status: false },
@@ -58,12 +58,30 @@ export const SpellsListPageHook = () => {
   const [schoolsInputState, setSchoolsInputState] =
     useState(defaultSchoolsStatus);
   const [nivelsInputState, setNivelsInputState] = useState(defaultNivelsStatus);
-  const FilterFormRef = useRef<HTMLFormElement>(null);
   const [spellsContainerOpenStatus, setSpellsContainerOpenStatus] =
     useState(defaultNivelsStatus);
 
+  const saveFiltersInLocalStorage = () => {
+    setTimeout(() => {
+      setStorage("userFilters", {
+        classes: classesInputState,
+        nivels: spellsContainerOpenStatus,
+        school: schoolsInputState,
+      });
+    }, 500);
+  };
+  const clearFilterInLocalStorage = () => {
+    setTimeout(() => {
+      setStorage("userFilters", {
+        classes: defaultClassStatus,
+        nivels: defaultNivelsStatus,
+        school: defaultSchoolsStatus,
+      });
+    }, 500);
+  };
+
   const nivelContainerToggle = useCallback(
-    (nivel: nivelsProps, status: boolean) => {
+    (nivel: NivelsProps, status: boolean) => {
       setNivelsInputState((prevState) => {
         const updatedState = { ...prevState };
         const targetNivel = nivel as keyof typeof updatedState;
@@ -71,8 +89,10 @@ export const SpellsListPageHook = () => {
 
         return updatedState;
       });
+
+      saveFiltersInLocalStorage();
     },
-    []
+    [nivelsInputState]
   );
 
   const filteredSpells = [
@@ -93,7 +113,7 @@ export const SpellsListPageHook = () => {
     updatedList[currentNivel].push(currentSpell);
 
     return updatedList;
-  }, {} as { [key in nivelsProps]: SpellType[] });
+  }, {} as { [key in NivelsProps]: SpellType[] });
 
   const spellFilterClassInputHandleCheck = (
     className: keyof typeof classesInputState,
@@ -105,6 +125,7 @@ export const SpellsListPageHook = () => {
 
       return updatedState;
     });
+    saveFiltersInLocalStorage();
   };
 
   const spellFilterSchoolInputHandleCheck = (
@@ -117,6 +138,8 @@ export const SpellsListPageHook = () => {
 
       return updatedState;
     });
+
+    saveFiltersInLocalStorage();
   };
 
   function filterByClass(spellList: SpellType[]) {
@@ -149,7 +172,8 @@ export const SpellsListPageHook = () => {
 
     return spellList.filter((currentSpell) => {
       const { school } = currentSpell;
-      const hasSomeSchool = schoolsInputState[school].status;
+      const hasSomeSchool =
+        schoolsInputState[school as keyof SchoolsType].status;
       return hasSomeSchool;
     });
   }
@@ -194,6 +218,7 @@ export const SpellsListPageHook = () => {
     setClassesInputState(resetFilter);
     setSchoolsInputState(resetFilter);
     setNivelsInputState(resetFilter);
+    clearFilterInLocalStorage();
   }
 
   const updateSpellsContainerOpenStatus = (
@@ -205,6 +230,21 @@ export const SpellsListPageHook = () => {
       [containerPropName]: { status: updateStatus },
     }));
 
+  const updateFiltersFromLocalStorage = () => {
+    const filtersFromLocalStorage = getStorage("userFilters");
+
+    if (filtersFromLocalStorage) {
+      const { classes, nivels, school } = filtersFromLocalStorage;
+      setClassesInputState(classes);
+      setSchoolsInputState(school);
+      setNivelsInputState(nivels);
+    }
+  };
+
+  useEffect(() => {
+    updateFiltersFromLocalStorage();
+  }, []);
+
   return {
     // spellsByColumns,
     classesInputState,
@@ -213,7 +253,6 @@ export const SpellsListPageHook = () => {
     spellsByNivel,
     searchInputValue,
     filterContainerIsOpen,
-    FilterFormRef,
     spellsContainerOpenStatus,
     clearFilters,
     setFilterContainerIsOpen,

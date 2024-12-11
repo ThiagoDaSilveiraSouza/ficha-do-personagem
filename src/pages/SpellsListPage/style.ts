@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 
 export const SpellsCardsContainer = styled.div`
   flex: 1 1 100%;
@@ -6,6 +6,7 @@ export const SpellsCardsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: start;
   gap: 20px;
+  padding-bottom: 20px;
 `;
 
 export const SpellNivelContainer = styled.div`
@@ -14,7 +15,7 @@ export const SpellNivelContainer = styled.div`
   background: white;
   border-radius: 8px;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 10px;
 `;
 
 export const SpellNivelDisplay = styled.div`
@@ -31,29 +32,45 @@ export const NivelTitleContainer = styled.label`
     display: none;
   }
 `;
-export const NivelTitle = styled.h3`
+
+type NivelTitleProps = {
+  $isopen?: string;
+};
+export const NivelTitle = styled.h3<NivelTitleProps>`
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
   color: black;
   margin: 0;
   padding: 10px;
+
+  svg {
+    transform: ${({ $isopen }) => $isopen === "false" && "rotate(180deg)"};
+    transition: 0.3s;
+  }
 `;
 
-type FilterContainerProps = {
-  $isopen: string;
-};
+export const FilterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
-export const FilterContainer = styled.form<FilterContainerProps>`
+export const FiltersListContainer = styled.form`
+  flex: 1 1 100%;
   margin-bottom: 30px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   width: 100%;
+  height: max-content;
+  overflow: auto;
+  max-height: 500px;
   padding: 0 10px;
   background: white;
   box-sizing: border-box;
   border-radius: 5px;
-  height: ${({ $isopen }) => ($isopen === "true" ? "fit-content" : "0px")};
   transition: 0.3s height;
-  overflow: hidden;
 `;
 
 export const FilterButtonContainer = styled.div`
@@ -64,7 +81,24 @@ export const FilterButtonContainer = styled.div`
   align-self: flex-end;
 `;
 
-export const FilterButton = styled.button`
+type FilterButtonProps = {
+  $position?: CSSProperties["position"];
+  $top?: CSSProperties["top"];
+  $left?: CSSProperties["left"];
+  $right?: CSSProperties["right"];
+  $bottom?: CSSProperties["bottom"];
+};
+
+export const FilterButton = styled.button<FilterButtonProps>`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  position: ${({ $position = "initial" }) => $position};
+  top: ${({ $top = "initial" }) => $top};
+  left: ${({ $left = "initial" }) => $left};
+  right: ${({ $right = "initial" }) => $right};
+  bottom: ${({ $bottom = "initial" }) => $bottom};
   margin-bottom: 10px;
   /* color: black; */
 `;
@@ -73,7 +107,6 @@ export const FilterSubtitle = styled.h4`
 `;
 
 export const SearchInput = styled.input`
-  width: 100%;
   max-width: 400px;
   padding: 8px 12px;
   margin-bottom: 16px;

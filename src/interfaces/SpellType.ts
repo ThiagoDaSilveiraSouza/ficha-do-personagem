@@ -1,4 +1,4 @@
-export type nivelsProps =
+export type NivelsProps =
   | "0"
   | "1"
   | "2"
@@ -14,7 +14,7 @@ export type SpellType = {
   id: string;
   name: string;
   school: string;
-  nivel: nivelsProps;
+  nivel: NivelsProps;
   castTime: string;
   range: string;
   components: string;

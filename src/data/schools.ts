@@ -1,4 +1,6 @@
-export const schools = [
+import { SchoolsType } from "../interfaces/SchoolsType";
+
+export const schools: SchoolsType[] = [
   {
     id: 1,
     name: "abjuração",
@@ -10,20 +12,20 @@ export const schools = [
     name: "adivinhação",
     color: "rgb(255, 250, 210)", // Amarelo bem claro para conhecimento
     element: "ar",
-},
-{
+  },
+  {
     id: 3,
     name: "conjuração",
     color: "rgb(210, 255, 210)", // Verde bem claro para criação
     element: "fogo",
-},
-{
+  },
+  {
     id: 4,
     name: "encantamento",
     color: "rgb(255, 230, 240)", // Rosa bem claro para charme
     element: "ar",
-},
-{
+  },
+  {
     id: 5,
     name: "evocação",
     color: "rgb(255, 230, 220)", // Laranja bem claro para explosões
